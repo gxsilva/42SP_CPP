@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 16:49:21 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/15 17:11:42 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/05/15 17:31:12 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ class Person
 	//Setter Declaration(s)
 		void			setName(std::string newName);
 	//Getter Declaration(s)
-		std::string		getName(void);
+		//methods that dont modify the object must be declare with const
+		const std::string		getName(void); 
 	private:
 	std::string		_name;
 	int				_age;
@@ -44,7 +45,7 @@ void Person::setName(std::string newName)
 }
 
 //Getter definition
-std::string Person::getName(void)
+const std::string Person::getName(void)
 {
 	return (this->_name);
 }
