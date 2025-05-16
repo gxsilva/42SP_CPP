@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 19:20:44 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/15 21:10:41 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/05/16 19:17:14 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int main(void)
 	PhoneBook	book;
 
 	std::cout << "-----------Phone Book----------------\n";
+	std::cout << "> [PhoneBook]: <ADD> | <SEARCH> | <EXIT> \n";
 	std::cout << "> ";
 	while (getline(std::cin, input))
 	{
@@ -30,7 +31,10 @@ int main(void)
 		else if (!input.compare("EXIT"))
 			break ;
 		else
+		{
 			std::cout << "> [PhoneBook]: Command not found 404\n";
+			std::cout << "> [PhoneBook]: <ADD> | <SEARCH> | <EXIT> \n";
+		}
 		std::cout << "-----------Phone Book----------------\n";
 		std::cout << "> ";
 	}
