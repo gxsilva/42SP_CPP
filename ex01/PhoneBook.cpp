@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 18:36:00 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/16 19:14:29 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/05/19 11:59:30 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,12 @@ void PhoneBook::searchIndex(void)
 
 	while (true)
 	{
-		std::cout << "> [PhoneBook]: Search for an index (0-" << max_index - 1 << ")\n";
+		std::cout << "> [PhoneBook]: Search for an index (0-" << max_index - 1 << ") | (-1 to exit)\n";
 		std::cout << "th> ";
 		std::getline(std::cin, input);
 
+		if (input == "-1")
+			break;
 		if (input.length() == 1 && std::isdigit(input[0]))
 		{
 			int idx = input[0] - '0';
