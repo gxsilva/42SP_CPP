@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Accounts.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/19 14:42:41 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/19 16:09:43 by lsilva-x         ###   ########.fr       */
+/*   Created: 2025/05/19 18:28:18 by lsilva-x          #+#    #+#             */
+/*   Updated: 2025/05/19 19:20:45 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Person.hpp"
+#include "Accounts.hpp"
 
-int main(void)
+Account::Account(int value) 
 {
-	Person	p1("Mario", 35);
-	Person	p2("Luigi", 42);
-
-	std::cout << Person::getPersonCnt() << " was created\n";
-	Person::printPerson();
+	this->_value = value;
+	std::cout << "constructor" << "\n";
 }

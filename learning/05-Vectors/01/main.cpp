@@ -5,19 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/19 14:42:41 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/19 16:09:43 by lsilva-x         ###   ########.fr       */
+/*   Created: 2025/05/19 18:58:10 by lsilva-x          #+#    #+#             */
+/*   Updated: 2025/05/19 19:21:47 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Person.hpp"
+#include <vector>
+#include "Accounts.hpp"
 
 int main(void)
 {
-	Person	p1("Mario", 35);
-	Person	p2("Luigi", 42);
+	int		value[] = {5, 78, 21, 35};
+	size_t	s_value = sizeof(value) / sizeof(value[0]);
 
-	std::cout << Person::getPersonCnt() << " was created\n";
-	Person::printPerson();
+	std::vector<Account::a> intVector(value, value + s_value);
+	//Criação e atribuição de valores tanto no construtor da classe
+	//quanto no construtor do vetor;
+	return (0);
 }

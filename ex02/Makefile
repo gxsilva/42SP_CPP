@@ -5,8 +5,34 @@
 #                                                     +:+ +:+         +:+      #
 #    By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/05/19 12:08:32 by lsilva-x          #+#    #+#              #
-#    Updated: 2025/05/19 12:08:32 by lsilva-x         ###   ########.fr        #
+#    Created: 2025/05/15 14:46:48 by lsilva-x          #+#    #+#              #
+#    Updated: 2025/05/19 16:14:45 by lsilva-x         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+CC = clang++
+CPPFLAGS = -std=c++98
+
+SRC =	Account.cpp \
+		tests.cpp \
+
+OBJ = $(SRC:.cpp=.o)
+NAME = phoneBook
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(CPPFLAGS) -o $(NAME) $(OBJ)
+
+%.o: %.cpp
+	$(CC) $(CPPFLAGS) -c $< -o $@
+
+clean:
+	rm -f $(OBJ)
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re

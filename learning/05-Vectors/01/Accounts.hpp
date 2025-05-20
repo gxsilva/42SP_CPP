@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Accounts.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/19 14:42:41 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/19 16:09:43 by lsilva-x         ###   ########.fr       */
+/*   Created: 2025/05/19 18:28:28 by lsilva-x          #+#    #+#             */
+/*   Updated: 2025/05/19 19:15:16 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Person.hpp"
 
-int main(void)
+class Account
 {
-	Person	p1("Mario", 35);
-	Person	p2("Luigi", 42);
-
-	std::cout << Person::getPersonCnt() << " was created\n";
-	Person::printPerson();
-}
+	public:
+		typedef Account a;
+		Account(int value);
+	
+	private:
+		int _value;
+};

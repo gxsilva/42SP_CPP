@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   mainTmp.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/19 14:42:41 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/19 16:09:43 by lsilva-x         ###   ########.fr       */
+/*   Created: 2025/05/19 20:42:48 by lsilva-x          #+#    #+#             */
+/*   Updated: 2025/05/19 21:34:47 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Account.hpp"
 #include <iostream>
-#include "Person.hpp"
+#include <vector>
 
 int main(void)
 {
-	Person	p1("Mario", 35);
-	Person	p2("Luigi", 42);
 
-	std::cout << Person::getPersonCnt() << " was created\n";
-	Person::printPerson();
+	int	const				amounts[]	= { 42, 54, 957, 432, 1234, 0, 754, 16576 };
+	size_t const			amounts_size( sizeof(amounts) / sizeof(int) );
+	std::vector<Account>	arr_int(amounts, amounts + amounts_size);
+
+	return (0);
 }
