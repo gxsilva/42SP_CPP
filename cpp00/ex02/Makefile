@@ -6,7 +6,7 @@
 #    By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/15 14:46:48 by lsilva-x          #+#    #+#              #
-#    Updated: 2025/05/19 16:14:45 by lsilva-x         ###   ########.fr        #
+#    Updated: 2025/05/20 16:53:01 by lsilva-x         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRC =	Account.cpp \
 		tests.cpp \
 
 OBJ = $(SRC:.cpp=.o)
-NAME = phoneBook
+NAME = Account
 
 all: $(NAME)
 
