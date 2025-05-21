@@ -6,11 +6,14 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 18:08:34 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/16 18:50:53 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/05/21 16:08:23 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 
 class Contact
 {
@@ -38,3 +41,5 @@ class Contact
 		std::string		_phoneNumber;
 		std::string		_darkestSecret;
 };
+
+#endif
