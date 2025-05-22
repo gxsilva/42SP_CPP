@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   replacer.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/22 19:01:07 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/22 19:59:57 by lsilva-x         ###   ########.fr       */
+/*   Created: 2025/05/22 20:14:47 by lsilva-x          #+#    #+#             */
+/*   Updated: 2025/05/22 20:40:20 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef REPLACER_HPP
-#define REPLACER_HPP
-
 #include <iostream>
-#include <fstream>
-#include <sstream>
-#include <cstring>
- 
-int verifyIO(std::string inputFileName, std::string outputFileName);
+#include "Harl.hpp"
 
-#endif
+int main(void)
+{
+	Harl		mainHarl;
+	std::string	level;
+
+	std::cout << "type a level: <DEBUG> | <INFO> | <WARNING> | <ERROR>\n";
+	std::cout << "> " ;
+	std::cin >> level;
+
+	mainHarl.complain(level);
+	return (0);
+}

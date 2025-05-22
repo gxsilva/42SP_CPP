@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/05/21 17:02:29 by lsilva-x          #+#    #+#              #
-#    Updated: 2025/05/22 17:18:31 by lsilva-x         ###   ########.fr        #
+#    Created: 2025/05/22 18:39:07 by lsilva-x          #+#    #+#              #
+#    Updated: 2025/05/22 20:37:09 by lsilva-x         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,12 +14,10 @@ CC = clang++
 CPPFLAGS = -std=c++98
 
 SRC =	main.cpp \
-		Weapon.cpp \
-		HumanA.cpp \
-		HumanB.cpp \
+		Harl.cpp
 
 OBJ = $(SRC:.cpp=.o)
-NAME = humans
+NAME = Harl
 
 all: $(NAME)
 
