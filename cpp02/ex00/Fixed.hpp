@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/22 20:44:57 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/24 22:08:57 by lsilva-x         ###   ########.fr       */
+/*   Created: 2025/05/24 23:41:59 by lsilva-x          #+#    #+#             */
+/*   Updated: 2025/05/25 01:50:48 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-#define HARL_HPP
+#ifndef Fixed_H
+#define Fixed_H
 
 #include <iostream>
 
-class Harl
+class Fixed
 {
-	public:
-		Harl (void);
-		~Harl (void);
-		void complain( std::string level );
-		
-	private:
-		void debug( void );
-		void info( void );
-		void warning( void );
-		void error( void );
+private:
+	int		_rawBits;
+	static const int __fractionalBits;
+public:
+	Fixed( void );
+	Fixed (const Fixed &fixed);
+	Fixed& operator=(const Fixed &fixed);
+	~Fixed( void );
+
+	int		getRawBits ( void ) const;
+	void	setRawBits ( int const raw );
 };
 
-#endif
+
+
+#endif // Fixed_H

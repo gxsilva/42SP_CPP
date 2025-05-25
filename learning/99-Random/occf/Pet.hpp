@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   Pet.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/22 20:44:57 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/24 22:08:57 by lsilva-x         ###   ########.fr       */
+/*   Created: 2025/05/24 22:53:58 by lsilva-x          #+#    #+#             */
+/*   Updated: 2025/05/24 23:40:58 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-#define HARL_HPP
+#ifndef Pet_H
+#define Pet_H
 
 #include <iostream>
 
-class Harl
+class Pet
 {
-	public:
-		Harl (void);
-		~Harl (void);
-		void complain( std::string level );
-		
-	private:
-		void debug( void );
-		void info( void );
-		void warning( void );
-		void error( void );
+private:
+	std::string		_name;
+public:
+	Pet& operator=(const Pet& pet);
+	Pet(std::string name) : _name(name) { return ; };
+	Pet(const Pet &petCopy) : _name(petCopy._name) { return ; };
+	~Pet(void) { return ; };
 };
 
-#endif
+Pet& Pet::operator=(const Pet& pet)
+{
+	if (this != &pet)
+		_name = pet._name;
+}
+
+#endif // Pet_H
