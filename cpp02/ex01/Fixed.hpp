@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 23:41:59 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/25 04:16:17 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/05/25 19:10:02 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,10 @@ public:
 	Fixed( const int intValue );
 	Fixed( const float floatValue );
 	Fixed (const Fixed &fixed);
+
 	Fixed& operator=(const Fixed &fixed);
+	friend std::ostream& operator<<(std::ostream &oS, Fixed const &param);
+
 	~Fixed( void );
 
 	int		getRawBits ( void ) const;
@@ -42,7 +45,5 @@ public:
 	float	toFloat ( void ) const;
 	int		toInt ( void ) const;
 };
-
-
 
 #endif // Fixed_H

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/21 16:49:12 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/25 18:27:17 by lsilva-x         ###   ########.fr       */
+/*   Created: 2025/05/25 18:16:34 by lsilva-x          #+#    #+#             */
+/*   Updated: 2025/05/25 18:19:52 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,22 @@
 
 int main(void)
 {
-	std::string mainStr = "HI THIS IS BRAIN";
-	std::string *stringPTR = &mainStr;
-	std::string &stringREF = mainStr;
+	Complex a(5, 6);
+	Complex b(10, 12);
 
-	std::cout << "memory address of the string variable:\t"<<  &mainStr << std::endl;
-	std::cout << "memory address held by stringPTR:\t"<<  stringPTR << std::endl;
-	std::cout << "memory address held by stringREF:\t"<<  &stringREF << std::endl;
+	Complex c = a + b;
 
-	std::cout << "-----------------------------------\n";
+	std::cout << a.getX() << std::endl;
+	std::cout << a.getY() << std::endl;
+	std::cout << a.getSumXY() << std::endl << std::endl;
 
-	std::cout << "value of the string variable:\t" << mainStr << std::endl;
-	std::cout << "value pointed to by stringPTR:\t" << *stringPTR << std::endl;
-	std::cout << "value pointed to by stringREF:\t" << stringREF << std::endl;
+	std::cout << b.getX() << std::endl;
+	std::cout << b.getY() << std::endl;
+	std::cout << b.getSumXY() << std::endl << std::endl;
+
 	
+	std::cout << c.getX() << std::endl;
+	std::cout << c.getY() << std::endl;
+	std::cout << c.getSumXY() << std::endl;
 	return (0);
 }
