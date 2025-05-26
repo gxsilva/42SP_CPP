@@ -1,34 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/26 01:37:59 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/26 01:38:11 by lsilva-x         ###   ########.fr       */
+/*   Created: 2025/05/26 18:59:10 by lsilva-x          #+#    #+#             */
+/*   Updated: 2025/05/26 18:59:40 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ClapTrap_H
-#define ClapTrap_H
+#include "cube.hpp"
 
-class ClapTrap
+int main(int argc, char const *argv[])
 {
-private:
-	/* data */
-public:
-	ClapTrap(/* args */);
-	~ClapTrap();
-};
+	cubeDerived	a;
 
-ClapTrap::ClapTrap(/* args */)
-{
+	a.setN();
+	a.printN();
+	return 0;
 }
-
-ClapTrap::~ClapTrap()
-{
-}
-
-
-#endif // ClapTrap_H

@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 23:41:59 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/25 19:10:02 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/05/26 20:03:20 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ public:
 	Fixed (const Fixed &fixed);
 
 	Fixed& operator=(const Fixed &fixed);
-	friend std::ostream& operator<<(std::ostream &oS, Fixed const &param);
 
 	~Fixed( void );
 
@@ -45,5 +44,7 @@ public:
 	float	toFloat ( void ) const;
 	int		toInt ( void ) const;
 };
+
+std::ostream& operator<<(std::ostream &oS, Fixed const &param);
 
 #endif // Fixed_H

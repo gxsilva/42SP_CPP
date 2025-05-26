@@ -6,7 +6,7 @@
 #    By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/25 23:29:14 by lsilva-x          #+#    #+#              #
-#    Updated: 2025/05/26 01:37:38 by lsilva-x         ###   ########.fr        #
+#    Updated: 2025/05/26 18:18:32 by lsilva-x         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRC =	main.cpp \
 		ClapTrap.cpp
 
 OBJ = $(SRC:.cpp=.o)
-NAME = bsp
+NAME = clapTrap
 
 all: $(NAME)
 
