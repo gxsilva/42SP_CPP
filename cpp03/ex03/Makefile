@@ -6,7 +6,7 @@
 #    By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/25 23:29:14 by lsilva-x          #+#    #+#              #
-#    Updated: 2025/05/28 14:32:12 by lsilva-x         ###   ########.fr        #
+#    Updated: 2025/05/28 17:49:19 by lsilva-x         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,10 +15,12 @@ CPPFLAGS = -std=c++98
 
 SRC =	main.cpp \
 		ClapTrap.cpp \
-		ScavTrap.cpp
+		ScavTrap.cpp \
+		FragTrap.cpp \
+		DiamondTrap.cpp \
 
 OBJ = $(SRC:.cpp=.o)
-NAME = scavTrap
+NAME = diamondTrap
 
 all: $(NAME)
 

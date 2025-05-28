@@ -6,12 +6,12 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 01:37:59 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/28 18:07:29 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/05/28 18:08:23 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_H
-#define CLAPTRAP_H
+#ifndef CLAPTRAP_HPP
+#define CLAPTRAP_HPP
 
 #include <iostream>
 
@@ -29,10 +29,10 @@ public:
 	ClapTrap(std::string name);
 	ClapTrap(const ClapTrap& clapTrap);
 	ClapTrap& operator=(const ClapTrap& clapTrap);
-	~ClapTrap();
+	virtual ~ClapTrap();
 
 	/* Methods */
-	void attack(const std::string& target);
+	virtual void attack(const std::string& target);
 	void takeDamage(int amount);
 	void beRepaired(int amount);
 	void consumeEnergy (void);
@@ -43,8 +43,12 @@ public:
 	const int			getEnergyPoints	(void) const { return (_energyPoints); }
 	const int			getAttackDamage	(void) const { return (_attackDamage); }
 
+	/* Re-Setters */
+	void				reSetName(const std::string newName) { this->_name = newName; }
+	
 	/* Setters */
 	void				setEnergyPoints	(const int newEnergyPoints) { this->_energyPoints = newEnergyPoints; }
+	void				setAttackDamage	(const int newAttackDamge) { this->_attackDamage = newAttackDamge; }
 	void				setHitPoints	(const int newHitPoints) { this->_hitPoints = newHitPoints; }
 };
 

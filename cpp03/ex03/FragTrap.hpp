@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/27 20:57:47 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/27 21:01:56 by lsilva-x         ###   ########.fr       */
+/*   Created: 2025/05/28 14:38:00 by lsilva-x          #+#    #+#             */
+/*   Updated: 2025/05/28 16:43:49 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
+
+#include "ClapTrap.hpp"
 #include <iostream>
 
-class Base
+class FragTrap : virtual public ClapTrap
 {
-	public:
-		~Base () { std::cout << "Base Destructor" << std::endl; }
+public:
+	FragTrap(void);
+	FragTrap(std::string name);
+
+	FragTrap(const FragTrap& fragTrap);
+	FragTrap& operator=(const FragTrap& fragTrap);
+
+	~FragTrap(void);
+
+	void highFivesGuys(void) const;
 };
-
-class Derived : public Base
-{
-	public:
-		~Derived () { std::cout << "Derived Destructor" << std::endl; }
-};
-
-int main(void)
-{
-	//this type of mutreta is called "Upcasting"
-	Base* juninho = new Derived();
-
-	delete juninho;
-
-	return (0);
-}
+#endif // FRAGTRAP_HPP

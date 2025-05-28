@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 14:12:07 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/28 17:59:24 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/05/28 17:58:34 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void ScavTrap::attack(const std::string& target)
 {
 	if (target.empty())
 		std::cout << "ScavTrap " << this->getName() << " must select a target" << std::endl;
-	else if (this->getHitPoints() <= 0)
+	if (this->getHitPoints() <= 0)
 		std::cout << "ScavTrap " << this->getName() << " is already dead" << std::endl;
 	else if (this->getEnergyPoints() <= 0)
 		std::cout << "ScavTrap " << this->getName() << " is out of energy points" << std::endl;
