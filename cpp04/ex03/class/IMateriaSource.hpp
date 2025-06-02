@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure                                        :+:      :+:    :+:   */
+/*   IMateriaSource                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -9,32 +9,19 @@
 /*   Updated: 2025/05/29 23:54:38 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#ifndef CURE_HPP
-# define CURE_HPP
+#ifndef IMATERIASOURCE_HPP
+# define IMATERIASOURCE_HPP
 
 # include <iostream>
-# include "../headers.hpp"
+# include "../includes/headers.hpp"
 
-class Cure : public AMateria
+class IMateriaSource
 {
 	public:
-		Cure(void);
-
-		Cure(const Cure& other);
-		Cure &operator=(const Cure &other);
-
-		virtual AMateria* clone() const;
-		virtual void use(ICharacter& target);
-
-		virtual ~Cure();
+		virtual ~IMateriaSource() {}
+		virtual void learnMateria(AMateria*) = 0;
+		virtual AMateria* createMateria(std::string const & type) = 0;
 };
-
-void Cure::use(ICharacter& target)
-{
-	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
-	return ;	
-}
-
 
 #endif
 

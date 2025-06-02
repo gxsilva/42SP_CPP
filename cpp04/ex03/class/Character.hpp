@@ -1,40 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.hpp                                       :+:      :+:    :+:   */
+/*   Character                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 23:54:38 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/01 23:29:34 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/05/29 23:54:38 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AMATERIA_HPP
-# define AMATERIA_HPP
+#ifndef CHARACTER_HPP
+# define CHARACTER_HPP
 
 # include <iostream>
-# include "../headers.hpp"
+# include "../includes/headers.hpp"
 
-class AMateria
+class Character : public ICharacter
 {
-	protected:
-		std::string		_type;
+	private:
+		std::string		_name;
 
 	public:
-		AMateria(void);
-		AMateria(std::string const &type);
+		Character(void);
+		Character(const std::string name);
 
-		AMateria(const AMateria& amateria);
-		AMateria& operator=(const AMateria& amateria);
+		Character(const Character& other);
+		Character &operator=(const Character &other);
 
-		virtual AMateria* clone() const = 0;
-		virtual void use(ICharacter& target);
-		
-		std::string const & getType() const;
+		~Character();
 
-		virtual ~AMateria(void);
+		/* Inheritance */
+		virtual std::string const & getName() const;
+		virtual void equip(AMateria* m);
+		virtual void unequip(int idx);
+		virtual void use(int idx, ICharacter& target);
 };
 
 #endif
-

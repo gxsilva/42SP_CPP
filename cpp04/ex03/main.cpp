@@ -6,11 +6,11 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 22:17:01 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/01 23:25:29 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/02 00:46:29 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "headers.hpp"
+#include "./includes/headers.hpp"
 
 int main()
 {

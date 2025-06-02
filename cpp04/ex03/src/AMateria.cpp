@@ -6,23 +6,23 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 22:25:40 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/01 23:20:14 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/02 00:46:01 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
+#include "../includes/headers.hpp"
 
 AMateria::AMateria(void)
 : _type("undefined")
-{ std::cout << "[AMateria]: Default constructor called" << std::endl; }
+{}
 
 AMateria::AMateria(std::string const &type)
 : _type(type)
-{ std::cout << "[AMateria]: Parameterized constructor called" << std::endl; }
+{}
 
 AMateria::AMateria(const AMateria& amateria)
 : _type(amateria.getType())
-{ std::cout << "[ClapTrap]: Copy constructor called" << std::endl; }
+{}
 
 AMateria& AMateria::operator=(const AMateria& amateria)
 {

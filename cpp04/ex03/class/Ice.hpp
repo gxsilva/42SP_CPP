@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter                                        :+:      :+:    :+:   */
+/*   Ice                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -9,26 +9,22 @@
 /*   Updated: 2025/05/29 23:54:38 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#ifndef ICHARACTER_HPP
-# define ICHARACTER_HPP
+#ifndef ICE_HPP
+# define ICE_HPP
 
 # include <iostream>
-# include "../headers.hpp"
+# include "../includes/headers.hpp"
 
-class ICharacter
+class Ice : public AMateria
 {
-	private:
-		std::string		_name;
-
 	public:
-		ICharacter(void);
+		Ice (void);
 
-		ICharacter(const ICharacter& other);
-		ICharacter &operator=(const ICharacter &other);
+		Ice (const Ice& ice);
+		Ice& operator=(const Ice& ice);
 
-		~ICharacter();
-
-		const std::string& getName (void) const;
+		virtual AMateria* clone() const;
+		virtual void use(ICharacter& target);
 };
 
 #endif

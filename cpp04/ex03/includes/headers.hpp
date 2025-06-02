@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 23:11:14 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/01 23:12:07 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/02 00:45:39 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 #define HEADERS_H
 
 #include <iostream>
-#include "includes/AMateria.hpp"
-#include "includes/Cure.hpp"
-#include "includes/Ice.hpp"
-#include "includes/ICharacter.hpp"
-#include "includes/IMateriaSource.hpp"
+#include "../class/AMateria.hpp"
+#include "../class/Cure.hpp"
+#include "../class/Ice.hpp"
+#include "../class/ICharacter.hpp"
+#include "../class/IMateriaSource.hpp"
+#include "../class/Character.hpp"
 
-#endif // HEADERS_H
+#endif // HEADERS_H'

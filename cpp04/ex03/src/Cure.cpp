@@ -6,41 +6,35 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 22:56:09 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/01 23:32:55 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/02 00:46:06 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cure.hpp"
+#include "../includes/headers.hpp"
 
 Cure::Cure(void)
 : AMateria("cure")
-{
-	std::cout << "Default constructor called" << std::endl;
-	return ;
-}
+{ }
 
 Cure::Cure(const Cure &other)
 : AMateria(other.getType())
-{
-	std::cout << "Copy constructor called" << std::endl;
-	return ;
-}
+{ }
 
 Cure &Cure::operator=(const Cure &other)
 {
-	std::cout << "Assignment operator called" << std::endl;
 	if (this != &other)
-		
+		AMateria::operator=(other);
 	return (*this);
 }
 
 Cure::~Cure(void)
+{ }
+
+void Cure::use(ICharacter& target)
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "* heals " << target.getName() << "'wounds *" << std::endl;
 	return ;
 }
 
 AMateria* Cure::clone() const
-{
-	return (new Cure(*this));
-}
+{ return (new Cure(*this)); }
