@@ -6,15 +6,11 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 22:25:40 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/02 20:16:27 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/02 21:08:41 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/headers.hpp"
-
-// AMateria::AMateria(void)
-// : _type("undefined")
-// {}
 
 AMateria::AMateria(std::string const &type)
 : _type(type)

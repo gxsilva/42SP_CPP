@@ -24,7 +24,7 @@ class Character : public ICharacter
 
 		AMateria*	materials[4];
 
-		static const AMateria*	unequipMaterials[999];
+		// static const AMateria*	unequipMaterials[999];
 
 	public:
 		Character(void);

@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 00:29:12 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/02 21:01:42 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/02 21:27:34 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,11 @@ Character &Character::operator=(const Character &other)
 /*-----------Destructor-------------*/
 Character::~Character(void)
 {
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->materials[i] != NULL)
+			delete (this->materials[i]);
+	}
 	if (DEBUGGIN_ACTIVE)
 		std::cout << "[Character]: Copy constructor called" << std::endl;
 	return ;
@@ -85,7 +90,7 @@ void Character::equip(AMateria* m)
 	int i = -1;
 	while (++i < 4)
 	{
-		if (getMaterial(i) != NULL)
+		if (getMaterial(i) == NULL)
 		{
 			this->materials[i] = m->clone();
 			break ;
@@ -99,11 +104,6 @@ void Character::equip(AMateria* m)
 		std::cout << "Character: " << this->getName()
 			<< " equips " << m->getType()
 			<< " at position: " << i << std::endl;
-	}
-	if (i == 4)
-	{
-		std::cout << "Character: " << this->getName()
-		<< " equips " << m->getType() << std::endl;
 	}
 }
 

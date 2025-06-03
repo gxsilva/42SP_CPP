@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 22:17:01 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/02 20:50:59 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/02 21:27:46 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,11 @@ int main()
 
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
+	delete (tmp);
 
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
+	delete (tmp);
 
 	ICharacter* bob = new Character("bob");
 

@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 17:47:58 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/02 20:52:48 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/02 21:20:23 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,10 @@ MateriaSource& MateriaSource::operator=(const MateriaSource& other)
 MateriaSource::~MateriaSource()
 {
 	for (int i = 0; i < 4; i++)
-		delete (this->_templates[i]);
+	{
+		if(this->_templates[i] != NULL)
+			delete (this->_templates[i]);
+	}
 	if (DEBUGGIN_ACTIVE)
 		std::cout << "[MateriaSource]: Destructor constructor called" << std::endl;
 }
@@ -66,7 +69,7 @@ void MateriaSource::learnMateria(AMateria* materia)
 	{
 		if (this->_templates[i] == NULL)
 		{
-			this->_templates[i] = materia->clone();
+			this->_templates[i] = materia;
 			break;
 		}
 	}
@@ -77,7 +80,7 @@ AMateria* MateriaSource::createMateria(std::string const & type)
 	for (int i = 0; i < 4; i++)
 	{
 		if (this->_templates[i] && this->_templates[i]->getType() == type)
-			return this->_templates[i]->clone();
+			return (this->_templates[i]->clone());
 	}
-	return NULL;
+	return (NULL);
 }
