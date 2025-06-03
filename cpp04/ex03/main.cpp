@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 22:17:01 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/02 00:46:29 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/02 20:50:59 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ int main()
 	me->use(0, *bob);
 	me->use(1, *bob);
 	
-	delete bob;
-	delete me;
-	delete src;
+	delete bob; // Character
+	delete me; // Character
+	delete src; // MateriaSource
 	return 0;
 }
 

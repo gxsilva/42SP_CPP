@@ -6,7 +6,7 @@
 #    By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/01 23:13:42 by lsilva-x          #+#    #+#              #
-#    Updated: 2025/06/01 23:15:37 by lsilva-x         ###   ########.fr        #
+#    Updated: 2025/06/02 19:54:31 by lsilva-x         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,16 +15,16 @@ CPPFLAGS = -std=c++98
 
 SRC_PWD = ./src
 
-SRC_FILES = $(SRC_PWD)/AMateria.cpp \
+SRC_FILES = $(SRC_PWD)/Character.cpp \
 			$(SRC_PWD)/Cure.cpp \
 			$(SRC_PWD)/Ice.cpp \
-			$(SRC_PWD)/ICharacter.cpp \
-			$(SRC_PWD)/IMateriaSource.cpp
+			$(SRC_PWD)/AMateria.cpp \
+			$(SRC_PWD)/MateriaSource.cpp \
 
 SRC = main.cpp $(SRC_FILES)
 
 OBJ = $(SRC:.cpp=.o)
-NAME = abstractClass
+NAME = materials
 
 all: $(NAME)
 

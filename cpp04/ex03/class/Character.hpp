@@ -14,12 +14,17 @@
 # define CHARACTER_HPP
 
 # include <iostream>
-# include "../includes/headers.hpp"
+# include "./ICharacter.hpp"
+# include "./AMateria.hpp"
 
 class Character : public ICharacter
 {
-	private:
+	protected:
 		std::string		_name;
+
+		AMateria*	materials[4];
+
+		static const AMateria*	unequipMaterials[999];
 
 	public:
 		Character(void);
@@ -31,10 +36,17 @@ class Character : public ICharacter
 		~Character();
 
 		/* Inheritance */
-		virtual std::string const & getName() const;
-		virtual void equip(AMateria* m);
-		virtual void unequip(int idx);
-		virtual void use(int idx, ICharacter& target);
+		std::string const & getName() const;
+		void equip(AMateria* m);
+		void unequip(int idx);
+		void use(int idx, ICharacter& target);
+
+		/* getters */
+		AMateria*	getMaterial (int pst) { return (this->materials[pst]); }
+		
+		/* setter */
+		void		setMaterial (AMateria* materia, int pst) { this->materials[pst] = materia; }
+
 };
 
 #endif

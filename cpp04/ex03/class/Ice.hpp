@@ -9,11 +9,15 @@
 /*   Updated: 2025/05/29 23:54:38 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #ifndef ICE_HPP
 # define ICE_HPP
 
 # include <iostream>
-# include "../includes/headers.hpp"
+# include "./AMateria.hpp"
+# include "./ICharacter.hpp"
+
+class AMateria;
 
 class Ice : public AMateria
 {
@@ -23,8 +27,10 @@ class Ice : public AMateria
 		Ice (const Ice& ice);
 		Ice& operator=(const Ice& ice);
 
-		virtual AMateria* clone() const;
-		virtual void use(ICharacter& target);
+		AMateria* clone() const;
+		void use(ICharacter& target);
+
+		~Ice (void);
 };
 
 #endif

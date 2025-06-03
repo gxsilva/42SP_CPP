@@ -9,11 +9,13 @@
 /*   Updated: 2025/05/29 23:54:38 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #ifndef CURE_HPP
 # define CURE_HPP
 
 # include <iostream>
-# include "../includes/headers.hpp"
+# include "./AMateria.hpp"
+# include "./ICharacter.hpp"
 
 class Cure : public AMateria
 {
@@ -23,10 +25,10 @@ class Cure : public AMateria
 		Cure(const Cure& other);
 		Cure &operator=(const Cure &other);
 
-		virtual AMateria* clone() const;
-		virtual void use(ICharacter& target);
+		AMateria* clone() const;
+		void use(ICharacter& target);
 
-		virtual ~Cure();
+		~Cure(void);
 };
 
 #endif

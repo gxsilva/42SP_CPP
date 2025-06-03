@@ -13,7 +13,9 @@
 # define IMATERIASOURCE_HPP
 
 # include <iostream>
-# include "../includes/headers.hpp"
+# include "AMateria.hpp"
+
+class AMateria;
 
 class IMateriaSource
 {
