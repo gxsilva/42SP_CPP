@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 22:56:09 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/02 19:54:53 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/03 20:25:42 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,14 @@ Cure::Cure(void)
 {
 	if (DEBUGGIN_ACTIVE)
 		std::cout << "[cure]: Default constructor called" << std::endl;
+}
+
+Cure::Cure(const std::string _ignore)
+: AMateria("cure")
+{
+	if (DEBUGGIN_ACTIVE)
+		std::cout << "[cure]: Parametrized constructor called" << std::endl;
+	(void)_ignore;
 }
 
 Cure::Cure(const Cure &other)

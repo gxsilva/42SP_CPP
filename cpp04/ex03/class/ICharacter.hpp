@@ -9,6 +9,9 @@
 /*   Updated: 2025/05/29 23:54:38 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../includes/headers.hpp"
+
 #ifndef ICHARACTER_HPP
 # define ICHARACTER_HPP
 

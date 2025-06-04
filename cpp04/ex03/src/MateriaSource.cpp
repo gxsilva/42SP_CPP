@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 17:47:58 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/02 21:20:23 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/03 22:16:37 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 MateriaSource::MateriaSource (void)
 {
 	for (int i = 0; i < 4; i++)
-		this->_templates[i] = NULL;
+		this->_storedMateria[i] = NULL;
 	if (DEBUGGIN_ACTIVE)
 		std::cout << "[MateriaSource]: Default constructor called" << std::endl;
 	return ;
@@ -27,7 +27,12 @@ MateriaSource::MateriaSource (void)
 MateriaSource::MateriaSource(const MateriaSource& other)
 {
 	for (int i = 0; i < 4; i++)
-		this->_templates[i] = other._templates[i];
+	{
+		if (other._storedMateria[i] != NULL)
+			this->_storedMateria[i] = other._storedMateria[i]->clone();
+		else
+			this->_storedMateria[i] = NULL;
+	}
 	if (DEBUGGIN_ACTIVE)
 		std::cout << "[MateriaSource]: Copy constructor called" << std::endl;
 }
@@ -39,10 +44,10 @@ MateriaSource& MateriaSource::operator=(const MateriaSource& other)
 	{
 		for (int i = 0; i < 4; i++)
 		{
-			delete (this->_templates[i]);
-			this->_templates[i] = NULL;
-			if (other._templates[i])
-				this->_templates[i] = other._templates[i]->clone();
+			if (other._storedMateria[i])
+				this->_storedMateria[i] = other._storedMateria[i]->clone();
+			else
+			this->_storedMateria[i] = NULL;
 		}
 	}
 	if (DEBUGGIN_ACTIVE)
@@ -55,8 +60,8 @@ MateriaSource::~MateriaSource()
 {
 	for (int i = 0; i < 4; i++)
 	{
-		if(this->_templates[i] != NULL)
-			delete (this->_templates[i]);
+		if(this->_storedMateria[i] != NULL)
+			delete (this->_storedMateria[i]);
 	}
 	if (DEBUGGIN_ACTIVE)
 		std::cout << "[MateriaSource]: Destructor constructor called" << std::endl;
@@ -65,22 +70,28 @@ MateriaSource::~MateriaSource()
 /*-----------Methods-------------*/
 void MateriaSource::learnMateria(AMateria* materia)
 {
-	for (int i = 0; i < 4;i++)
+	int i = -1;
+	while (++i < 4)
 	{
-		if (this->_templates[i] == NULL)
+		if (this->_storedMateria[i] == NULL)
 		{
-			this->_templates[i] = materia;
+			std::cout << "[MateriaSource]: Learn " << materia->getType() << std::endl;
+			this->_storedMateria[i] = materia->clone(); //ownership
 			break;
 		}
 	}
+	if (i == 4)
+		std::cout << "[MateriaSource]: Is already full of magic" << std::endl;
+	if (materia != NULL)
+		delete (materia);
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type)
 {
 	for (int i = 0; i < 4; i++)
 	{
-		if (this->_templates[i] && this->_templates[i]->getType() == type)
-			return (this->_templates[i]->clone());
+		if (this->_storedMateria[i] && this->_storedMateria[i]->getType() == type)
+			return (this->_storedMateria[i]);
 	}
 	return (NULL);
 }

@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/29 23:54:38 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/03 20:06:04 by lsilva-x         ###   ########.fr       */
+/*   Created: 2025/06/03 18:47:47 by lsilva-x          #+#    #+#             */
+/*   Updated: 2025/06/03 19:15:43 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/headers.hpp"
-
-#ifndef IMATERIASOURCE_HPP
-# define IMATERIASOURCE_HPP
 
 # include <iostream>
-# include "AMateria.hpp"
 
-class AMateria;
-
-class IMateriaSource
-{
+class Base {
 	public:
-		virtual ~IMateriaSource() {}
-		virtual void learnMateria(AMateria*) = 0;
-		virtual AMateria* createMateria(std::string const & type) = 0;
-};
-
-#endif
-
+		Base() { std::cout << "Base constructor" << std::endl; }
+		virtual ~Base() { std::cout << "Base destructor" << std::endl; }
+	};
+	
+	class Derived : public Base {
+	public:
+		Derived() { std::cout << "Derived constructor" << std::endl; }
+		~Derived() { std::cout << "Derived destructor" << std::endl; }
+	};
+	
+	int main() {
+		Base* ptr = new Derived();
+		delete ptr;
+		return 0;
+	}

@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../includes/headers.hpp"
+
 #ifndef CURE_HPP
 # define CURE_HPP
 
@@ -21,6 +23,7 @@ class Cure : public AMateria
 {
 	public:
 		Cure(void);
+		Cure(const std::string _ignore);
 
 		Cure(const Cure& other);
 		Cure &operator=(const Cure &other);
@@ -31,5 +34,5 @@ class Cure : public AMateria
 		~Cure(void);
 };
 
-#endif
+#endif //CURE_HPP
 

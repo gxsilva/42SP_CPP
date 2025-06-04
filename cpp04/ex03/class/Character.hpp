@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../includes/headers.hpp"
+
 #ifndef CHARACTER_HPP
 # define CHARACTER_HPP
 
@@ -21,10 +23,7 @@ class Character : public ICharacter
 {
 	protected:
 		std::string		_name;
-
-		AMateria*	materials[4];
-
-		// static const AMateria*	unequipMaterials[999];
+		AMateria*		_materias[4];
 
 	public:
 		Character(void);
@@ -42,10 +41,10 @@ class Character : public ICharacter
 		void use(int idx, ICharacter& target);
 
 		/* getters */
-		AMateria*	getMaterial (int pst) { return (this->materials[pst]); }
+		AMateria*	getMaterial (int idx) { return (this->_materias[idx]); }
 		
 		/* setter */
-		void		setMaterial (AMateria* materia, int pst) { this->materials[pst] = materia; }
+		void		setMaterial (AMateria* materia, int idx) { this->_materias[idx] = materia; }
 
 };
 

@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 23:30:02 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/02 16:45:09 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/03 20:20:52 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,16 @@ Ice::Ice (void)
 {
 	if (DEBUGGIN_ACTIVE)
 		std::cout << "[Ice]: Default constructor called" << std::endl;
+	return ;
+}
+
+Ice::Ice (const std::string _ignore)
+: AMateria("ice")
+{
+	(void)_ignore;
+	if (DEBUGGIN_ACTIVE)
+		std::cout << "[Ice]: Parametrized constructor called" << std::endl;
+	return ;
 }
 
 Ice::Ice (const Ice& ice)
@@ -25,6 +35,7 @@ Ice::Ice (const Ice& ice)
 {
 	if (DEBUGGIN_ACTIVE)
 		std::cout << "[Ice]: Copy constructor called" << std::endl;
+	return ;
 }
 
 /*-----------OCCF-------------*/

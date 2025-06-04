@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 17:47:58 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/02 21:25:31 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/03 21:58:54 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@
 class MateriaSource : public IMateriaSource
 {
 	protected:
-		const AMateria* _templates[4];
-		const AMateria* _createMaterial[4];
+		AMateria* _storedMateria[4];
 		
 	public:
 		MateriaSource (void);
