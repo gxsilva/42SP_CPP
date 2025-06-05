@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 01:37:59 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/28 18:07:29 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/05 14:55:45 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ public:
 
 	/* Getters */
 	const std::string&	getName			(void) const { return (_name); }
-	const int			getHitPoints	(void) const { return (_hitPoints); }
-	const int			getEnergyPoints	(void) const { return (_energyPoints); }
-	const int			getAttackDamage	(void) const { return (_attackDamage); }
+	int			getHitPoints	(void) const { return (_hitPoints); }
+	int			getEnergyPoints	(void) const { return (_energyPoints); }
+	int			getAttackDamage	(void) const { return (_attackDamage); }
 
 	/* Setters */
 	void				setEnergyPoints	(const int newEnergyPoints) { this->_energyPoints = newEnergyPoints; }

@@ -6,12 +6,12 @@
 #    By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/21 16:01:37 by lsilva-x          #+#    #+#              #
-#    Updated: 2025/05/21 16:28:41 by lsilva-x         ###   ########.fr        #
+#    Updated: 2025/06/05 14:51:45 by lsilva-x         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = clang++
-CPPFLAGS = -std=c++98
+CC = c++
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRC =	main.cpp \
 		zombieHorde.cpp \

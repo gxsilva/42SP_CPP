@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 18:20:44 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/28 14:14:03 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/05 14:56:11 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ public:
 
 	~ScavTrap();
 
-	const bool getGuardGate(void) const { return (this->_inGuardGate); }
+	bool getGuardGate(void) const { return (this->_inGuardGate); }
 	
 	void setGuardGate(void) { getGuardGate() ? _inGuardGate = false : _inGuardGate = true; }
 	

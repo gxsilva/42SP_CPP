@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 18:08:34 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/21 16:08:23 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/05 14:48:27 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Contact
 		void setPhoneNumber(void);
 		void setDarkestSecret(void);
 
-		const void getFullInfo(void);
+		void getFullInfo(void);
 
 		const std::string& getFirstName(void);
 		const std::string& getLastName(void);

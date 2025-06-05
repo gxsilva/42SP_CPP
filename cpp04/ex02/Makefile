@@ -6,12 +6,12 @@
 #    By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/25 23:29:14 by lsilva-x          #+#    #+#              #
-#    Updated: 2025/05/30 02:54:54 by lsilva-x         ###   ########.fr        #
+#    Updated: 2025/06/05 14:53:15 by lsilva-x         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = clang++
-CPPFLAGS = -std=c++98
+CC = c++
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRC =	main.cpp \
 		Animal.cpp \

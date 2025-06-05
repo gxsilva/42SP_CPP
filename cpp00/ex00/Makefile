@@ -6,11 +6,11 @@
 #    By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/15 13:07:12 by lsilva-x          #+#    #+#              #
-#    Updated: 2025/05/15 14:19:50 by lsilva-x         ###   ########.fr        #
+#    Updated: 2025/06/05 14:49:13 by lsilva-x         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = clang++
+CC = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRC = ./megaphone.cpp

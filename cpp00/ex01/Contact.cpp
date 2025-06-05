@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 18:32:48 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/16 19:30:29 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/05 14:48:32 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -163,7 +163,7 @@ void Contact::setContact(void)
 	std::cout << "> [PhoneBook]: New contact add!\n";
 }
 
-const void Contact::getFullInfo(void)
+void Contact::getFullInfo(void)
 {
 	std::cout << "First Name: "<< this->getFirstName() << std::endl;
 	std::cout << "Last Name: "<< this->getLastName() << std::endl;

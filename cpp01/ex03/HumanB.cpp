@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 17:08:36 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/22 17:34:46 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/04 15:48:57 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ void HumanB::setWeapon (Weapon::w &newWeapon) { this->_weapon = &newWeapon; }
 
 void HumanB::attack ( void ) const
 {
-	std::cout << this->_name << " attacks with their " << this->_weapon->getType() << "\n";
+	if (this->_weapon != NULL)
+		std::cout << this->_name << " attacks with their " << this->_weapon->getType() << "\n";
 };

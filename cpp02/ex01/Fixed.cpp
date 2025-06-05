@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 23:41:59 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/25 19:29:12 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/04 17:59:35 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ Fixed::~Fixed(void)
 };
 
 int Fixed::getRawBits ( void ) const
-{ return ((this->_rawBits >> Fixed::__fractionalBits)); }
+{ return (this->_rawBits); }
 
 void Fixed::setRawBits ( int const raw ) { this->_rawBits = raw; }
 

@@ -6,12 +6,12 @@
 #    By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/01 23:13:42 by lsilva-x          #+#    #+#              #
-#    Updated: 2025/06/02 19:54:31 by lsilva-x         ###   ########.fr        #
+#    Updated: 2025/06/05 14:53:21 by lsilva-x         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = clang++
-CPPFLAGS = -std=c++98
+CC = c++
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRC_PWD = ./src
 

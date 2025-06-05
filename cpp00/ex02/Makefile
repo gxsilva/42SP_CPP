@@ -6,12 +6,12 @@
 #    By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/15 14:46:48 by lsilva-x          #+#    #+#              #
-#    Updated: 2025/05/20 16:53:01 by lsilva-x         ###   ########.fr        #
+#    Updated: 2025/06/05 14:49:25 by lsilva-x         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = clang++
-CPPFLAGS = -std=c++98
+CC = c++
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRC =	Account.cpp \
 		tests.cpp \
