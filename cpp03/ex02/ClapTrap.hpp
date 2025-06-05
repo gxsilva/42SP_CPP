@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 01:37:59 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/28 18:08:23 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/05 18:41:34 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,20 +38,18 @@ public:
 	void consumeEnergy (void);
 
 	/* Getters */
-	const std::string&	getName			(void) const { return (_name); }
-	const int			getHitPoints	(void) const { return (_hitPoints); }
-	const int			getEnergyPoints	(void) const { return (_energyPoints); }
-	const int			getAttackDamage	(void) const { return (_attackDamage); }
+	const std::string&	getName			(void) const;
+	int			getHitPoints	(void) const;
+	int			getEnergyPoints	(void) const;
+	int			getAttackDamage	(void) const;
 
 	/* Re-Setters */
-	void				reSetName(const std::string newName) { this->_name = newName; }
+	void				reSetName(const std::string newName);
 	
 	/* Setters */
-	void				setEnergyPoints	(const int newEnergyPoints) { this->_energyPoints = newEnergyPoints; }
-	void				setAttackDamage	(const int newAttackDamge) { this->_attackDamage = newAttackDamge; }
-	void				setHitPoints	(const int newHitPoints) { this->_hitPoints = newHitPoints; }
+	void				setEnergyPoints	(const int newEnergyPoints);
+	void				setAttackDamage	(const int newAttackDamge);
+	void				setHitPoints	(const int newHitPoints);
 };
-
-
 
 #endif // ClapTrap_H

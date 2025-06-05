@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 18:06:07 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/28 18:55:28 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/05 18:46:46 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ DiamondTrap::DiamondTrap(void)
 }
 
 DiamondTrap::DiamondTrap(std::string name) 
-: ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name)
+: ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name)
 {
 	std::cout << "[DiamondTrap]: Parameterized constructor called" << std::endl;
 	this->_name = name;
@@ -75,3 +75,9 @@ void DiamondTrap::whoAmI() const
 {
 	std::cout << "DiamondTrap name: " << this->_name << ", ClapTrap name: " << this->ClapTrap::getName() << std::endl;
 }
+
+const std::string& DiamondTrap::getName (void) const { return _name; }
+
+void DiamondTrap::setName (const std::string newName) { _name = newName; }
+
+const std::string& DiamondTrap::tmp(void) const { return (ClapTrap::getName());}

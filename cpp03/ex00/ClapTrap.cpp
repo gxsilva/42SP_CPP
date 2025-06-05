@@ -6,13 +6,13 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 01:38:14 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/28 18:07:24 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/05 18:28:48 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-
+// ===== Constructor(s) =====
 ClapTrap::ClapTrap(void)
 : _name("unnamed"), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
@@ -37,6 +37,8 @@ ClapTrap::ClapTrap(const ClapTrap& clapTrap)
 	return;
 }
 
+// ===== Overloaded Operators =====
+
 ClapTrap& ClapTrap::operator=(const ClapTrap& clapTrap)
 {
 	std::cout << "[ClapTrap]: Assignment constructor called" << std::endl;
@@ -50,12 +52,14 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& clapTrap)
 	return (*this);
 }
 
+// ===== Destructor(s) =====
 ClapTrap::~ClapTrap( void )
 {
 	std::cout << "[ClapTrap]: Destructor called" << std::endl;
 	return;
 }
 
+// ===== Method(s) =====
 void ClapTrap::consumeEnergy( void )
 {
 	this->setEnergyPoints(this->getEnergyPoints() - 1);
@@ -107,3 +111,11 @@ void ClapTrap::beRepaired(int amount)
 						<< " hit points!" << std::endl;
 	}
 }
+
+const std::string& ClapTrap::getName (void) const { return (_name); }
+int ClapTrap::getHitPoints (void) const { return (_hitPoints); }
+int ClapTrap::getEnergyPoints (void) const { return (_energyPoints); }
+int ClapTrap::getAttackDamage (void) const { return (_attackDamage); }
+
+void ClapTrap::setEnergyPoints (const int newEnergyPoints) { this->_energyPoints = newEnergyPoints; }
+void ClapTrap::setHitPoints (const int newHitPoints) { this->_hitPoints = newHitPoints; }

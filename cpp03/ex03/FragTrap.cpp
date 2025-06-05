@@ -17,7 +17,6 @@ FragTrap::FragTrap(void)
 : ClapTrap()
 {
 	setHitPoints(100);
-	// setEnergyPoints(100);
 	setAttackDamage(30);
 	std::cout << "[FragTrap]: Default constructor called" << std::endl;
 	return ;
@@ -27,7 +26,6 @@ FragTrap::FragTrap(std::string name)
 : ClapTrap(name)
 {
 	setHitPoints(100);
-	// setEnergyPoints(100);
 	setAttackDamage(30);
 	std::cout << "[FragTrap]: Parameterized constructor called" << std::endl;
 	return ;

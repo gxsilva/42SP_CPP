@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 01:38:14 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/28 18:08:50 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/05 18:41:01 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,3 +111,16 @@ void ClapTrap::beRepaired(int amount)
 						<< " hit points!" << std::endl;
 	}
 }
+
+const std::string& ClapTrap::getName (void) const { return (_name); }
+int ClapTrap::getHitPoints (void) const { return (_hitPoints); }
+int ClapTrap::getEnergyPoints (void) const { return (_energyPoints); }
+int ClapTrap::getAttackDamage (void) const { return (_attackDamage); }
+
+/* Re-Setters */
+void ClapTrap::reSetName(const std::string newName) { this->_name = newName; }
+
+/* Setters */
+void ClapTrap::setEnergyPoints (const int newEnergyPoints) { this->_energyPoints = newEnergyPoints; }
+void ClapTrap::setAttackDamage (const int newAttackDamge) { this->_attackDamage = newAttackDamge; }
+void ClapTrap::setHitPoints (const int newHitPoints) { this->_hitPoints = newHitPoints; }

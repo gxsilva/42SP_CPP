@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 14:12:07 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/28 18:00:12 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/05 18:39:52 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,3 +89,7 @@ void ScavTrap::guardGate(void)
 		std::cout << "ScavTrap is now OUT Gate keeper mode!" << std::endl;
 	this->setGuardGate();
 }
+
+bool ScavTrap::getGuardGate(void) const { return (this->_inGuardGate); }
+
+void ScavTrap::setGuardGate(void) { getGuardGate() ? _inGuardGate = false : _inGuardGate = true; }
