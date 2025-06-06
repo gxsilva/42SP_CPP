@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 01:38:27 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/28 14:36:08 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/05 19:13:26 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,16 @@ int main()
 	clap.attack("target2");
 	clap.attack("target2");
 
+	std::cout << "\n--- Multiple ScavTrap Actions ---\n";
 	scav.takeDamage(7);
 	scav.takeDamage(7);
 	scav.beRepaired(4);
+	scav.attack("target2");
 	scav.guardGate();
+	scav.attack("target2");
+	scav.takeDamage(7);
+	scav.guardGate();
+	scav.takeDamage(7);
 	scav.attack("target2");
 
 	std::cout << "\n--- End of Test ---\n";

@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 01:38:14 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/05 18:43:14 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/05 19:03:24 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void ClapTrap::attack(const std::string& target)
 	}
 }
 
-void ClapTrap::takeDamage(int amount)
+void ClapTrap::takeDamage(unsigned int amount)
 {
 	if (amount < 0)
 		std::cout << "ClapTrap " << this->getName() << " cannot take negative damage XD" << std::endl;
@@ -96,7 +96,7 @@ void ClapTrap::takeDamage(int amount)
 	}
 }
 
-void ClapTrap::beRepaired(int amount)
+void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (amount < 0)
 		std::cout << "ClapTrap " << this->getName() << " cannot negative repair XD" << std::endl;

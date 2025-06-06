@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 18:06:07 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/05 18:46:46 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/05 19:19:24 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,3 @@ void DiamondTrap::whoAmI() const
 const std::string& DiamondTrap::getName (void) const { return _name; }
 
 void DiamondTrap::setName (const std::string newName) { _name = newName; }
-
-const std::string& DiamondTrap::tmp(void) const { return (ClapTrap::getName());}

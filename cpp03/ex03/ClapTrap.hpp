@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 01:37:59 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/05 18:46:08 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/05 19:02:26 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ public:
 
 	/* Methods */
 	virtual void attack(const std::string& target);
-	void takeDamage(int amount);
-	void beRepaired(int amount);
+	void takeDamage(unsigned int amount);
+	void beRepaired(unsigned int amount);
 	void consumeEnergy (void);
 
 	/* Getters */

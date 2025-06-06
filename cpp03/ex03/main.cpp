@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 01:38:27 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/28 18:59:53 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/06 15:35:06 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ int main(void) {
     {
       DiamondTrap Teteu("Teteu");
 
-	  std::cout << "TETEU internal name:\t: " <<  Teteu.tmp() << std::endl; 
 	  std::cout << "TETEU outside name:\t: " <<  Teteu.getName() << std::endl; 
       std::cout << "TETEU Hit Points(must be 100):\t" << Teteu.getHitPoints() << std::endl;
       std::cout << "TETEU Energy Points(must be 50):\t" << Teteu.getEnergyPoints() << std::endl;
