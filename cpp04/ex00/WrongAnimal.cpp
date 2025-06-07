@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 00:47:01 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/30 00:50:56 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/06 16:26:03 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ WrongAnimal::WrongAnimal(void)
 WrongAnimal::WrongAnimal(const WrongAnimal& other)
 : type(other.getType())
 {
-	std::cout << "[Animal]: Copy constructor called" << std::endl;
+	std::cout << "[WrongAnimal]: Copy constructor called" << std::endl;
 	return ;
 }
 

@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 16:18:47 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/05 19:16:24 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/06 20:36:00 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ public:
 	~DiamondTrap();
 
 	const std::string& getName (void) const;
+
+	void attack(const std::string& target);
 
 	void setName (const std::string newName);
 	

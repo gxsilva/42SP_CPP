@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 14:38:03 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/28 17:48:00 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/06 20:10:52 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 FragTrap::FragTrap(void)
 : ClapTrap()
 {
-	setHitPoints(100);
-	setEnergyPoints(100);
-	setAttackDamage(30);
+	this->_hitPoints = 100;
+	this->_energyPoints = 100;
+	this->_attackDamage = 30;
 	std::cout << "[FragTrap]: Default constructor called" << std::endl;
 	return ;
 }
@@ -26,16 +26,19 @@ FragTrap::FragTrap(void)
 FragTrap::FragTrap(std::string name)
 : ClapTrap(name)
 {
-	setHitPoints(100);
-	setEnergyPoints(100);
-	setAttackDamage(30);
+	this->_hitPoints = 100;
+	this->_energyPoints = 100;
+	this->_attackDamage = 30;
 	std::cout << "[FragTrap]: Parameterized constructor called" << std::endl;
 	return ;
 }
 
 FragTrap::FragTrap(const FragTrap& fragTrap)
-: ClapTrap(fragTrap)
+: ClapTrap(fragTrap._name)
 {
+	this->_hitPoints = fragTrap._hitPoints;
+	this->_energyPoints = fragTrap._energyPoints;
+	this->_attackDamage = fragTrap._attackDamage;
 	std::cout << "[FragTrap]: Copy constructor called" << std::endl;
 	return ;
 }
@@ -61,4 +64,22 @@ FragTrap::~FragTrap(void)
 void FragTrap::highFivesGuys(void) const
 {
 	std::cout << "[FragTrap]: High five, guys! ✋" << std::endl;
+}
+
+void FragTrap::attack(const std::string& target)
+{
+	if (target.empty())
+		std::cout << "FragTrap " << this->_name << " must select a target" << std::endl;
+	else if (this->_hitPoints <= 0)
+		std::cout << "FragTrap " << this->_name << " is already dead to attack" << std::endl;
+	else if (this->_energyPoints <= 0)
+		std::cout << "FragTrap " << this->_name << " is out of energy points" << std::endl;
+	else
+	{
+		this->consumeEnergy();
+		std::cout << "FragTrap " << this->_name
+					<< " attacks " << target
+					<< ", causing " << this->_attackDamage
+					<< " points of damage!" << std::endl;
+	}
 }

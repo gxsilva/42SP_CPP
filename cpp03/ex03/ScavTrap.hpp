@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 18:20:44 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/06 15:34:40 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/06 20:29:13 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,14 @@ public:
 
 	~ScavTrap();
 
-	bool getGuardGate(void) const { return (this->_inGuardGate); }
+	bool getGuardGate(void) const;
 	
-	void setGuardGate(void) { getGuardGate() ? _inGuardGate = false : _inGuardGate = true; }
+	void setGuardGate(void);
 	
 	void attack(const std::string& target);
 	void guardGate(void);
 };
+
+
 
 #endif // SCAVTRAP_HPPs

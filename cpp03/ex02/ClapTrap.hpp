@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 01:37:59 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/05 19:02:22 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/06 19:22:47 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ClapTrap
 {
-private:
+protected:
 	std::string		_name;
 	int				_hitPoints;
 	int				_energyPoints;
@@ -38,17 +38,13 @@ public:
 	void consumeEnergy (void);
 
 	/* Getters */
-	const std::string&	getName			(void) const;
+	const std::string&	getName	(void) const;
 	int			getHitPoints	(void) const;
 	int			getEnergyPoints	(void) const;
 	int			getAttackDamage	(void) const;
 
-	/* Re-Setters */
-	void				reSetName(const std::string newName);
-	
 	/* Setters */
 	void				setEnergyPoints	(const int newEnergyPoints);
-	void				setAttackDamage	(const int newAttackDamge);
 	void				setHitPoints	(const int newHitPoints);
 };
 

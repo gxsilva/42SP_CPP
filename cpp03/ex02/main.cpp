@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 01:38:27 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/28 16:16:51 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/06 20:26:49 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,23 @@ int main()
 	ClapTrap clap("Klebinho");
 	ScavTrap scav("Marcolino");
 	FragTrap frag("Zezinho");
+
+	std::cout << "\n--- ClapTrap SET ---\n";
+	std::cout << clap.getName() << std::endl;
+	std::cout << clap.getHitPoints() << std::endl;
+	std::cout << clap.getEnergyPoints() << std::endl;
+	std::cout << clap.getAttackDamage() << std::endl;
+	std::cout << "\n--- SCVATRAP SET ---\n";
+	std::cout << scav.getName() << std::endl;
+	std::cout << scav.getHitPoints() << std::endl;
+	std::cout << scav.getEnergyPoints() << std::endl;
+	std::cout << scav.getAttackDamage() << std::endl;
+	std::cout << "\n--- FRAG SET ---\n";
+	std::cout << frag.getName() << std::endl;
+	std::cout << frag.getHitPoints() << std::endl;
+	std::cout << frag.getEnergyPoints() << std::endl;
+	std::cout << frag.getAttackDamage() << std::endl;
+
 
 	std::cout << "\n--- ClapTrap Actions ---\n";
 	clap.attack("target1");

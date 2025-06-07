@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 14:38:00 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/06 15:34:33 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/06 20:29:03 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ public:
 	~FragTrap(void);
 
 	void highFivesGuys(void) const;
+	void attack(const std::string& target);
 };
 #endif // FRAGTRAP_HPP

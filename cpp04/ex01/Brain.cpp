@@ -1,14 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/06 16:26:35 by lsilva-x          #+#    #+#             */
+/*   Updated: 2025/06/06 16:26:57 by lsilva-x         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Brain.hpp"
 
 Brain::Brain(void)
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "[Brain]: Default constructor called" << std::endl;
 	return ;
 }
 
 Brain::Brain(const Brain &other)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "[Brain]: Copy constructor called" << std::endl;
 	for (int i = 0; i < 100; i++)
 		this->ideas[i] = other.getIdeas(i);
 	return ;
@@ -16,7 +28,7 @@ Brain::Brain(const Brain &other)
 
 Brain &Brain::operator=(const Brain &other)
 {
-	std::cout << "Assignment operator called" << std::endl;
+	std::cout << "[Brain]: Assignment operator called" << std::endl;
 	
 	if(this != &other)
 	{
@@ -28,7 +40,7 @@ Brain &Brain::operator=(const Brain &other)
 
 Brain::~Brain(void)
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "[Brain]: Destructor called" << std::endl;
 	return ;
 }
 

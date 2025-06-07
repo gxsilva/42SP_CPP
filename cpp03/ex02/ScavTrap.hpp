@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 18:20:44 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/05 18:39:32 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/05 18:37:08 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,7 @@ public:
 	void attack(const std::string& target);
 	void guardGate(void);
 };
+
+
 
 #endif // SCAVTRAP_HPPs
