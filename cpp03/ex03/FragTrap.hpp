@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 14:38:00 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/06 20:29:03 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/09 16:02:34 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,13 @@ public:
 	FragTrap(void);
 	FragTrap(std::string name);
 
+	FragTrap(int opt);
+	FragTrap(std::string name, int opt);
+
 	FragTrap(const FragTrap& fragTrap);
 	FragTrap& operator=(const FragTrap& fragTrap);
 
-	~FragTrap(void);
+	virtual ~FragTrap(void);
 
 	void highFivesGuys(void) const;
 	void attack(const std::string& target);

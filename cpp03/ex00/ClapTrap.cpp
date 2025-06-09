@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 01:38:14 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/06 20:24:31 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/09 15:22:06 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,9 @@ void ClapTrap::consumeEnergy( void )
 
 void ClapTrap::attack(const std::string& target)
 {
-	if (target.empty())
+	if(this->_hitPoints <= 0)
+		std::cout << "ClapTrap " << this->getName() << " is already dead to attack" << std::endl;
+	else if (target.empty())
 		std::cout << "ClapTrap " << this->getName() << " must select a target" << std::endl;
 	else if (this->getEnergyPoints() <= 0)
 		std::cout << "ClapTrap " << this->getName() << " is out of energy points" << std::endl;
@@ -100,6 +102,8 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (amount < 0)
 		std::cout << "ClapTrap " << this->getName() << " cannot negative repair XD" << std::endl;
+	else if(this->_hitPoints <= 0)
+		std::cout << "ClapTrap " << this->getName() << " is already dead to repaired" << std::endl;
 	else if (this->getEnergyPoints() <= 0)
 		std::cout << "ClapTrap " << this->getName() << " is out of energy points" << std::endl;
 	else

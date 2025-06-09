@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 18:20:44 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/06 20:29:13 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/09 16:02:37 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class ScavTrap : virtual public ClapTrap
 {
-private:
+protected:
 	bool	_inGuardGate;
 
 public:
@@ -28,7 +28,7 @@ public:
 	
 	ScavTrap& operator=(const ScavTrap& scavTrap);
 
-	~ScavTrap();
+	virtual ~ScavTrap();
 
 	bool getGuardGate(void) const;
 	

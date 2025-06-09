@@ -6,12 +6,11 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 01:38:14 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/06 20:24:21 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/09 15:16:11 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-
 
 ClapTrap::ClapTrap(void)
 : _name("unnamed"), _hitPoints(10), _energyPoints(10), _attackDamage(0)
@@ -112,6 +111,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 	}
 }
 
+/* Getters */
 const std::string& ClapTrap::getName (void) const { return (this->_name); }
 int ClapTrap::getHitPoints (void) const { return (this->_hitPoints); }
 int ClapTrap::getEnergyPoints (void) const { return (this->_energyPoints); }

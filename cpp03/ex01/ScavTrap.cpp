@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 14:12:07 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/06 20:01:01 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/09 15:58:29 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,14 +90,14 @@ void ScavTrap::attack(const std::string& target)
 void ScavTrap::guardGate(void)
 {
 	if (this->_hitPoints <= 0)
-		std::cout << "ScavTrap is already dead to Keeper mode" << std::endl;
+		std::cout << "ScavTrap " << this->_name << " is already dead to Keeper mode" << std::endl;
 	else if (!this->_inGuardGate)
-		std::cout << "ScavTrap is now IN Gate keeper mode!" << std::endl;
+		std::cout << "ScavTrap " << this->_name << " is now IN Gate keeper mode!" << std::endl;
 	else
-		std::cout << "ScavTrap is now OUT Gate keeper mode!" << std::endl;
+		std::cout << "ScavTrap " << this->_name << " is now OUT Gate keeper mode!" << std::endl;
 	this->setGuardGate();
 }
 
 bool ScavTrap::getGuardGate(void) const { return (this->_inGuardGate); }
 	
-void ScavTrap::setGuardGate(void) { this->_inGuardGate ?  this->_inGuardGate = false :  this->_inGuardGate = true; }
+void ScavTrap::setGuardGate(void) { this->_inGuardGate ?  this->_inGuardGate = false : this->_inGuardGate = true; }

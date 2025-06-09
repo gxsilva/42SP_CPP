@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 14:38:03 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/06 21:03:04 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/09 15:47:10 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ FragTrap::FragTrap(void)
 : ClapTrap()
 {
 	this->_hitPoints = 100;
+	this->_energyPoints = 100;
 	this->_attackDamage = 30;
 	std::cout << "[FragTrap]: Default constructor called" << std::endl;
 	return ;
@@ -26,10 +27,33 @@ FragTrap::FragTrap(std::string name)
 : ClapTrap(name)
 {
 	this->_hitPoints = 100;
+	this->_energyPoints = 100;
 	this->_attackDamage = 30;
 	std::cout << "[FragTrap]: Parameterized constructor called" << std::endl;
 	return ;
 }
+
+/* Special Constructors */
+FragTrap::FragTrap(int opt)
+: ClapTrap()
+{
+	(void)opt;
+	this->_hitPoints = 100;
+	this->_attackDamage = 30;
+	std::cout << "[FragTrap]: Default constructor called" << std::endl;
+	return ;
+}
+
+FragTrap::FragTrap(std::string name, int opt)
+: ClapTrap(name)
+{
+	(void)opt;
+	this->_hitPoints = 100;
+	this->_attackDamage = 30;
+	std::cout << "[FragTrap]: Parameterized constructor called" << std::endl;
+	return ;
+}
+
 
 FragTrap::FragTrap(const FragTrap& fragTrap)
 : ClapTrap(fragTrap._name)

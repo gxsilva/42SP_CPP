@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 14:38:03 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/06 20:10:52 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/09 15:38:28 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,10 @@ FragTrap::~FragTrap(void)
 /* Methods*/
 void FragTrap::highFivesGuys(void) const
 {
-	std::cout << "[FragTrap]: High five, guys! ✋" << std::endl;
+	if (this->_hitPoints <= 0)
+		std::cout << "FragTrap " << this->_name << " is already dead to High Five" << std::endl;
+	else
+		std::cout << "[FragTrap]: High five, guys! ✋" << std::endl;
 }
 
 void FragTrap::attack(const std::string& target)

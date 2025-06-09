@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 01:37:59 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/06 19:22:47 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/09 15:15:45 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,20 @@ protected:
 	int				_attackDamage;
 
 public:
-	/* OCCF */
 	ClapTrap(void);
 	ClapTrap(std::string name);
+	
+	/* OCCF */
 	ClapTrap(const ClapTrap& clapTrap);
 	ClapTrap& operator=(const ClapTrap& clapTrap);
+	
 	virtual ~ClapTrap();
 
 	/* Methods */
 	virtual void attack(const std::string& target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
+	
 	void consumeEnergy (void);
 
 	/* Getters */

@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 18:06:07 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/06 20:47:59 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/09 16:05:31 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 */
 
 DiamondTrap::DiamondTrap(void)
-: ClapTrap("unnamed_clap_name"), ScavTrap("unnamed"), FragTrap("unnamed")
+: ClapTrap("unnamed_clap_name"), ScavTrap("unnamed"), FragTrap(0)
 {
 	std::cout << "[DiamondTrap]: Default constructor called" << std::endl;
 	this->_name = "unnamed";
@@ -32,7 +32,7 @@ DiamondTrap::DiamondTrap(void)
 }
 
 DiamondTrap::DiamondTrap(std::string name) 
-: ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name)
+: ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name, 0)
 {
 	std::cout << "[DiamondTrap]: Parameterized constructor called" << std::endl;
 	this->_name = name;
@@ -83,18 +83,5 @@ void DiamondTrap::setName (const std::string newName) { _name = newName; }
 
 void DiamondTrap::attack(const std::string& target)
 {
-	if (target.empty())
-		std::cout << "DiamondTrap " << this->_name << " must select a target" << std::endl;
-	else if (this->_hitPoints <= 0)
-		std::cout << "DiamondTrap " << this->_name << " is already dead to attack" << std::endl;
-	else if (this->_energyPoints <= 0)
-		std::cout << "DiamondTrap " << this->_name << " is out of energy points" << std::endl;
-	else
-	{
-		this->consumeEnergy();
-		std::cout << "DiamondTrap " << this->_name
-					<< " attacks " << target
-					<< ", causing " << this->_attackDamage
-					<< " points of damage!" << std::endl;
-	}
+	ScavTrap::attack(target);
 }

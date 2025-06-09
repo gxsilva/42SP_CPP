@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 01:38:27 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/06 20:01:54 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/09 15:33:19 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,16 @@ int main()
 	ClapTrap clap("Klebinho");
 	ScavTrap scav("Marcolino");
 
-	std::cout << "\n--- ClapTrap SET ---\n";
-	std::cout << clap.getName() << std::endl;
-	std::cout << clap.getHitPoints() << std::endl;
-	std::cout << clap.getEnergyPoints() << std::endl;
-	std::cout << clap.getAttackDamage() << std::endl;
-	std::cout << "\n--- SCVATRAP SET ---\n";
-	std::cout << scav.getName() << std::endl;
-	std::cout << scav.getHitPoints() << std::endl;
-	std::cout << scav.getEnergyPoints() << std::endl;
-	std::cout << scav.getAttackDamage() << std::endl;
+	std::cout << "-------------Before------------" << std::endl;
+	std::cout << "Name:\t\t\t " << clap.getName() << std::endl;
+	std::cout << "Energy_Points:\t\t " << clap.getEnergyPoints() << std::endl;
+	std::cout << "Life Points(hitPts):\t " << clap.getHitPoints() << std::endl;
 
 
+	std::cout << "\nName:\t\t\t " << scav.getName() << std::endl;
+	std::cout << "Energy_Points:\t\t " << scav.getEnergyPoints() << std::endl;
+	std::cout << "Life Points(hitPts):\t " << scav.getHitPoints() << std::endl;
+	std::cout << "---------------------------------" << std::endl;
 
 	std::cout << "\n--- ClapTrap Actions ---\n";
 	clap.attack("target1");
@@ -44,8 +42,6 @@ int main()
 
 	std::cout << "\n--- Multiple ScavTrap Actions ---\n";
 	scav.takeDamage(7);
-	std::cout << scav.getHitPoints() << std::endl;
-	std::cout << scav.getEnergyPoints() << std::endl;
 	scav.takeDamage(7);
 	scav.beRepaired(4);
 
@@ -62,6 +58,17 @@ int main()
 	scav.guardGate();
 	scav.takeDamage(7);
 	scav.attack("target2");
+
+	std::cout << "-------------After------------" << std::endl;
+	std::cout << "Name:\t\t\t " << clap.getName() << std::endl;
+	std::cout << "Energy_Points:\t\t " << clap.getEnergyPoints() << std::endl;
+	std::cout << "Life Points(hitPts):\t " << clap.getHitPoints() << std::endl;
+
+
+	std::cout << "\nName:\t\t\t " << scav.getName() << std::endl;
+	std::cout << "Energy_Points:\t\t " << scav.getEnergyPoints() << std::endl;
+	std::cout << "Life Points(hitPts):\t " << scav.getHitPoints() << std::endl;
+	std::cout << "---------------------------------" << std::endl;
 
 	std::cout << "\n--- End of Test ---\n";
 	return 0;
