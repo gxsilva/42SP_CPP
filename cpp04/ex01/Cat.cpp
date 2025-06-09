@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 00:19:07 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/30 02:33:18 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/09 18:35:15 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ Cat::Cat(void)
 : Animal(), _catBrain(new Brain())
 {
 	std::cout << "[Cat]: Default constructor called" << std::endl;
-	this->setType("Cat");
+	this->type = "Cat";
+
 	return ;
 }
 
@@ -24,7 +25,8 @@ Cat::Cat(const Cat& other)
 : Animal(), _catBrain(new Brain())
 {
 	std::cout << "[Cat]: Copy constructor called" << std::endl;
-	this->setType(other.getType());
+	this->type = other.type;
+
 	return ;
 }
 
@@ -33,10 +35,8 @@ Cat& Cat::operator=(const Cat &other)
 	std::cout << "[Cat]: Assign constructor called" << std::endl;
 	if (this != &other)
 	{
-		if (this->_catBrain) //delete the oldest brain (if it already exist)
-			delete (this->_catBrain);
-		this->_catBrain = new Brain(*other._catBrain);
-		this->setType(other.getType());
+		this->_catBrain = other._catBrain; //deep copy operator
+		this->type = other.type;
 	}
 	return (*this);
 }

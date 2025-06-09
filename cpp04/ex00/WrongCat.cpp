@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 00:49:10 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/30 00:50:09 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/09 16:45:27 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ WrongCat::~WrongCat()
 }
 void WrongCat::makeSound(void) const
 {
-	std::cout << "[WrongCat]: Meow! Meow!" << std::endl;
+	std::cout << "[WrongCat]: Woof! miar..? Woof!" << std::endl;
 	return ;
 }
 

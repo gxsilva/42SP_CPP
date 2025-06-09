@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 23:58:00 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/30 00:40:21 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/09 16:38:34 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Animal::Animal(void)
 }
 
 Animal::Animal(const Animal& other)
-: type(other.getType())
+: type(other.type)
 {
 	std::cout << "[Animal]: Copy constructor called" << std::endl;
 	return ;
@@ -49,6 +49,3 @@ void Animal::makeSound(void) const
 
 const std::string& Animal::getType(void) const
 { return (this->type); }
-
-void Animal::setType(std::string animalType)
-{ this->type = animalType; }

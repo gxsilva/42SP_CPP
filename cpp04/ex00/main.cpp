@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 00:17:45 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/30 00:56:22 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/09 18:05:26 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,53 +23,56 @@ int main(void) {
 	  const Animal *meta = new Animal();
 	  const Animal *j = new Dog();
 	  const Animal *i = new Cat();
-	  std::cout << j->getType() << " " << std::endl;
-	  std::cout << i->getType() << " " << std::endl;
-	  i->makeSound(); // will output the cat sound!
+	  std::cout << std::endl;
+	  std::cout << j->getType() << std::endl;
+	  std::cout << i->getType() << std::endl;
+	  std::cout << std::endl;
 	  j->makeSound();
+	  i->makeSound(); // will output the cat sound!
 	  meta->makeSound();
+	  std::cout << std::endl;
 	  delete meta;
 	  delete j;
 	  delete i;
 	}
 	{
-	  std::cout << "\nMy tests:\n" << std::endl;
 	  std::cout << "---------- Animal & Cat/Dog ----------" << std::endl;
 	  const Animal *dog = new Dog();
 	  const Animal *cat = new Cat();
 	  const Animal *meta_animal = new Animal();
-  
+	  std::cout << std::endl;
+	  
 	  std::cout << dog->getType() << "-> ";
 	  dog->makeSound();
   
 	  std::cout << cat->getType() << "-> ";
 	  cat->makeSound();
-  
-	  std::cout << std::endl;
-  
 	  meta_animal->makeSound();
   
+	  std::cout << std::endl;
+	  delete dog;
+	  delete cat;
+	  delete meta_animal;
 	  std::cout << std::endl;
   
 	  std::cout << "---------- WrongAnimal & WrongCat ----------" << std::endl;
   
 	  const WrongAnimal *wrong_cat = new WrongCat();
-	  const WrongAnimal *meta_wrong_animal = new WrongAnimal();
+	  const WrongCat *wrong_cat_cast = new WrongCat();
   
 	  std::cout << std::endl;
   
 	  std::cout << wrong_cat->getType() << "-> ";
 	  wrong_cat->makeSound();
   
-	  meta_wrong_animal->makeSound();
+	  std::cout << wrong_cat_cast->getType() << "-> ";
+	  wrong_cat_cast->makeSound();
   
 	  std::cout << std::endl;
   
-	  delete dog;
-	  delete cat;
-	  delete meta_animal;
+	
 	  delete wrong_cat;
-	  delete meta_wrong_animal;
+	  delete wrong_cat_cast;
 	}
 	return 0;
   }

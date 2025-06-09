@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 23:58:11 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/30 00:35:47 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/09 16:38:36 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,6 @@ class Animal
 
 		const std::string& getType(void) const;
 		
-		void setType (std::string animalType);
-
 		virtual void makeSound(void) const;
 };
 
