@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 22:25:40 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/06/03 20:15:03 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/06/09 18:52:36 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ AMateria::~AMateria()
 
 AMateria& AMateria::operator=(const AMateria& amateria) //no-op
 {
+	(void)amateria;
 	if (DEBUGGIN_ACTIVE)
 		std::cout << "[AMateria]: Assignment operator called (no-op, AMateria is immutable)" << std::endl;
 	return (*this);
