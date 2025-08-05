@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 14:48:30 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/15 14:52:58 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/04 20:56:32 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 
 enum ColorsEnum
 {
-	White,
-	Black,
-	Purple,
-	Red
+	White, //0
+	Black, // 1
+	Purple, // 2
+	Red // 3
 };
 
 ColorsEnum get_value(std::string color_str)
@@ -45,7 +45,7 @@ int main(void)
 
 	std::cout << "Color: ";
 	std::cin >> input;
-	std::cout << "color type enum" << get_value(input) << "\n";
+	std::cout << "color type enum " << get_value(input) << "\n";
 	
 	return (0);
 }

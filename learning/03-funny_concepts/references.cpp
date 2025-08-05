@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 22:29:54 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/14 22:49:02 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/04 21:04:47 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,17 +49,14 @@ int main(void)
 	std::cout << "X straight ptr value: " << &x << "\n";
 	std::cout << "X value acessed from it reference: " << x_ref << "\n";
 	
-	std::cout << "Y straight value: " << y_def << "\n";
-	std::cout << "Y acesses the ptr value: " << *y_def << "\n";
-	std::cout << "Y value acessed from it reference: " << *y_def << "\n";
-	
 	std::cout << "\n\n";
 	std::cout << "Z_ref ptr" << &z_ref << "\n";
 	std::cout << "Z_ref val" << z_ref << "\n";
 	z_ref = x;
-	std::cout << "Z_ref ptr" << &z_ref << "\n";
+	std::cout << "Z_ref ptr" << &z_ref << "\n"; // the same place in the memory but diffrente value
 	std::cout << "Z_ref val" << z_ref << "\n";
 	std::cout << "Z_ref val" << z << "\n";
+	std::cout << "Z_ref ptr val" << &z << "\n";
 	std::cout << "\n\n";
 	
 
