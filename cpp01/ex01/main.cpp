@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 16:02:32 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/05/21 16:32:47 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/10 18:34:31 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ int main(void)
 		delete[] horde;
 	}
 	else
-		std::cerr << "Failed to create zombie horde." << std::endl;
+		std::cout << "Failed to create zombie horde." << std::endl;
 	return 0;
 }

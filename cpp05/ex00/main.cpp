@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 15:22:10 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/10 16:13:59 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/10 18:34:27 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void testValidBureaucrat()
 	}
 	catch (const std::exception &e)
 	{
-		std::cerr << e.what() << std::endl;
+		std::cout << e.what() << std::endl;
 	}
 }
 
@@ -39,7 +39,7 @@ void testInvalidGradeTooHigh()
 	}
 	catch (const std::exception &e)
 	{
-		std::cerr << "Caught exception: " << e.what() << std::endl;
+		std::cout << "Caught exception: " << e.what() << std::endl;
 	}
 }
 
@@ -52,7 +52,7 @@ void testInvalidGradeTooLow()
 	}
 	catch (const std::exception &e)
 	{
-		std::cerr << "Caught exception: " << e.what() << std::endl;
+		std::cout << "Caught exception: " << e.what() << std::endl;
 	}
 }
 
@@ -66,7 +66,7 @@ void testBoundaryConditions()
 	}
 	catch (const std::exception &e)
 	{
-		std::cerr << "Caught exception: " << e.what() << std::endl;
+		std::cout << "Caught exception: " << e.what() << std::endl;
 	}
 
 	try
@@ -77,7 +77,7 @@ void testBoundaryConditions()
 	}
 	catch (const std::exception &e)
 	{
-		std::cerr << "Caught exception: " << e.what() << std::endl;
+		std::cout << "Caught exception: " << e.what() << std::endl;
 	}
 }
 
