@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 16:25:27 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/10 22:45:14 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/11 00:20:33 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class Form
 		Form(const std::string name, unsigned int gradeRequiredToSign, unsigned int gradeRequiredToExecute);
 		Form(const Form &f);
 		Form &operator=(const Form &f);
-		~Form(void);
+		virtual ~Form(void);
 
 		//Exceptions
 		class GradeTooHighException : public std::exception
