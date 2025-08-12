@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 15:03:00 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/11 21:21:36 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/12 01:42:10 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 #include <cerrno>
 #include <iomanip>
 #include <cstdlib>
+#include <cmath>
+
 /*
 Pseudo literals to handle
 inff, +inff, nanf, nan
@@ -50,10 +52,13 @@ class ScalarConverter
 		static bool			isChar(const std::string &input);
 		static bool			isInteger(const std::string &input);
 		static bool			isFloat(const std::string &input);
+		static bool			isDouble(const std::string &input);
 		
 		static void			convertPseudo(const std::string &input);
 		static void			convertChar(const std::string &input);
 		static void			convertInt(const std::string &input);
+		static void			convertFloat(const std::string &input);
+		static void			convertDouble(const std::string &input);
 
 	public:
 		static void			convert(const std::string &input);

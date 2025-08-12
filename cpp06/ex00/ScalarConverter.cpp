@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 15:39:07 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/11 21:23:57 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/12 01:52:10 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ const std::string ScalarConverter::impossibleStr = RED + std::string("impossible
 
 //-------------METHODS--------------------
 
-//-------------IS_SOMETHING----------------
+//=================IS_SOMETHING=================
 bool ScalarConverter::isPseudoLiteral(const std::string &inputSanitize)
 {
 	std::string		pseudo[] = {"inf", "+inf", "-inf", "inff", "+inff", "-inff", "nanf", "+nanf", "-nanf", "nan", "+nan", "-nan"};
@@ -65,11 +65,35 @@ bool ScalarConverter::isInteger(const std::string &input)
 
 bool ScalarConverter::isFloat(const std::string &input)
 {
-	
+	char		*end;
+	float		value;
+
+	errno = 0;
+	value = std::strtof(input.c_str(), &end);
+	if (errno == ERANGE || end == input.c_str() || *end != 'f' || *(end + 1) != '\0')
+		return (false);
+	//also exist denorm_min()
+	if (value < -std::numeric_limits<float>::max() || value > std::numeric_limits<float>::max())
+		return (false);
+	return (true);
+}
+
+bool ScalarConverter::isDouble(const std::string &input)
+{
+	char		*rest;
+	double		value;
+
+	errno = 0;
+	value = std::strtod(input.c_str(), &rest);
+	if (errno == ERANGE || rest == input.c_str() || *rest != '\0')
+		return false;
+	if (value < -std::numeric_limits<double>::max() || value > std::numeric_limits<double>::max())
+		return false;
+	return true;
 }
 
 
-//-------------CONVERT-------------------
+//=================CONVERT=================
 void ScalarConverter::convertPseudo(const std::string &inputSanitize)
 {
     std::string tmp = (inputSanitize.at(0) == '+')
@@ -121,6 +145,49 @@ void ScalarConverter::convertInt(const std::string &input)
 	std::cout << "double: " << GREEN << static_cast<double>(integerValue) << RESET << std::endl;
 }
 
+void ScalarConverter::convertFloat(const std::string &input)
+{
+	float	floatValue = atof(input.c_str());
+
+	if(floatValue == 0)
+		floatValue = 0;
+	if (floatValue < std::numeric_limits<char>::min() || floatValue > std::numeric_limits<char>::max())
+		std::cout << "char: " << ScalarConverter::impossibleStr << std::endl;
+	else if (isprint(static_cast<unsigned char>(floatValue)))
+		std::cout << "char: " << GREEN << static_cast<char>(floatValue) << RESET << std::endl;
+	else
+		std::cout << "char: " << YELLOW << "Non displayable" << RESET << std::endl;
+	if(floatValue < std::numeric_limits<int>::max() && floatValue > std::numeric_limits<int>::min())
+		std::cout << "int: " << GREEN << static_cast<int>(floatValue) << RESET << std::endl;
+	else
+		std::cout << "int: " << ScalarConverter::impossibleStr << std::endl;
+	std::cout << "float: " << GREEN << floatValue << "f" << RESET << std::endl;
+	std::cout << "double: " << GREEN << static_cast<double>(floatValue) << RESET << std::endl;
+}
+
+void ScalarConverter::convertDouble(const std::string &input)
+{
+	double	doubleValue = atof(input.c_str());
+
+	if(doubleValue == 0)
+		doubleValue = 0;
+	if (doubleValue < std::numeric_limits<char>::min() || doubleValue > std::numeric_limits<char>::max())
+		std::cout << "char: " << ScalarConverter::impossibleStr << std::endl;
+	else if (isprint(static_cast<unsigned char>(doubleValue)))
+		std::cout << "char: " << GREEN << static_cast<char>(doubleValue) << RESET << std::endl;
+	else
+		std::cout << "char: " << YELLOW << "Non displayable" << RESET << std::endl;
+	if(doubleValue < std::numeric_limits<int>::max() && doubleValue > std::numeric_limits<int>::min())
+		std::cout << "int: " << GREEN << static_cast<int>(doubleValue) << RESET << std::endl;
+	else
+		std::cout << "int: " << ScalarConverter::impossibleStr << std::endl;
+	if (doubleValue < std::numeric_limits<float>::max() && doubleValue > -std::numeric_limits<float>::max())
+		std::cout << "float: " << GREEN << static_cast<float>(doubleValue) << "f" << RESET << std::endl;
+	else
+		std::cout << "float: " << ScalarConverter::impossibleStr << std::endl;
+	std::cout << "double: " << GREEN << static_cast<double>(doubleValue) << RESET << std::endl;
+}
+
 //-----------AUXILIARY------------------
 void	ScalarConverter::convert(const std::string &strValue)
 {
@@ -135,6 +202,15 @@ void	ScalarConverter::convert(const std::string &strValue)
 		convertInt(sntString);
 	else if (ScalarConverter::isFloat(sntString))
 		convertFloat(sntString);
+	else if (ScalarConverter::isDouble(sntString))
+		convertDouble(sntString);
+	else
+	{
+		std::cout << "char: " << ScalarConverter::impossibleStr << std::endl;
+		std::cout << "int: " << ScalarConverter::impossibleStr << std::endl;
+		std::cout << "float: " << ScalarConverter::impossibleStr << std::endl;
+		std::cout << "double: " << ScalarConverter::impossibleStr << std::endl;
+	}
 }
 
 std::string		ScalarConverter::sanitizeStr(const std::string &input)
