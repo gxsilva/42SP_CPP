@@ -6,17 +6,18 @@
 #    By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/10 15:22:49 by lsilva-x          #+#    #+#              #
-#    Updated: 2025/08/13 16:35:25 by lsilva-x         ###   ########.fr        #
+#    Updated: 2025/08/13 18:44:35 by lsilva-x         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
 CPPFLAGS = -Wall -Wextra -Werror -Wshadow -std=c++98
 
-SRC =	main.cpp 
+SRC =	main.cpp \
+	Span.cpp
 
 OBJ = $(SRC:.cpp=.o)
-NAME = stl
+NAME = span
 
 all: $(NAME)
 
