@@ -6,13 +6,21 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 21:24:27 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/10 23:56:38 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/13 03:15:39 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/PresidentialPardonForm.hpp"
 
 //------------------OCCF-----------------
+PresidentialPardonForm::PresidentialPardonForm(void)
+: AForm("PresidentialPardonForm", 25, 5, "default")
+{
+	if (DEBUG_PRESIDENTIAL_PARDON)
+		std::cout << "[Shruberry]: Default constructor called" << std::endl;
+	return ;
+}
+
 PresidentialPardonForm::PresidentialPardonForm(const std::string targetPath)
 : AForm("PresidentialPardonForm", 25, 5, targetPath)
 {

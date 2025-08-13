@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 15:20:50 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/10 16:13:44 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/13 03:12:48 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class Bureaucrat
 
 	public:
 		//OCCF
+		Bureaucrat(void);
 		Bureaucrat(const std::string &name, unsigned int grade);
 		Bureaucrat(const Bureaucrat &b);
 		Bureaucrat& operator=(const Bureaucrat &b);

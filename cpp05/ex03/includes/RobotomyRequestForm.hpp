@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 21:30:28 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/10 22:50:12 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/13 03:19:54 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class RobotomyRequestForm : public AForm
 {
 	public:
 		//OOCF
+		RobotomyRequestForm(void);
 		RobotomyRequestForm(const std::string targetPath);
 		RobotomyRequestForm(const RobotomyRequestForm &s);
 		RobotomyRequestForm& operator=(const RobotomyRequestForm &s);

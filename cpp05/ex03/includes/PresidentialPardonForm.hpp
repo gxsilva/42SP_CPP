@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 20:50:27 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/10 23:35:09 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/13 03:19:48 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class PresidentialPardonForm : public AForm
 {
 	public:
 		//OCCF
+		PresidentialPardonForm(void);
 		PresidentialPardonForm(const std::string targetPath);
 		PresidentialPardonForm(const PresidentialPardonForm &s);
 		PresidentialPardonForm& operator=(const PresidentialPardonForm &s);

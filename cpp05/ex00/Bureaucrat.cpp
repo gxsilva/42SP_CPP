@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 15:20:47 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/10 16:15:45 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/13 03:13:31 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,13 @@ unsigned int Bureaucrat::grade_max = 1;
 unsigned int Bureaucrat::grade_min = 150;
 
 //------------------OCCF-----------------
+Bureaucrat::Bureaucrat(void)
+: _name("default"), _grade(150)
+{
+	if (DEBUG)
+		std::cout << "[Bureaucrat]: Default constructor called" << std::endl;
+}
+
 Bureaucrat::Bureaucrat(const std::string &name, unsigned int grade)
 : _name(name), _grade(grade)
 {

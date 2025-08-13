@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 20:50:27 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/10 22:13:34 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/13 03:20:01 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class ShrubberyCreationForm : public AForm
 {
 	public:
 		//OCCF
+		ShrubberyCreationForm(void);
 		ShrubberyCreationForm(const std::string targetPath);
 		ShrubberyCreationForm(const ShrubberyCreationForm &s);
 		ShrubberyCreationForm& operator=(const ShrubberyCreationForm &s);

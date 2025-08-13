@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 16:25:27 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/11 00:20:17 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/13 03:18:50 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ class AForm
 		
 	public:
 		//OOCF
+		AForm(void);
 		AForm(const std::string &name,
 			unsigned int gradeRequiredToSign,
 			unsigned int gradeRequiredToExecute,
@@ -80,4 +81,4 @@ class AForm
 std::ostream &operator<<(std::ostream &Os, const AForm &f);
 std::ostream &operator<<(std::ostream &Os, const AForm *f);
 
-#endif
+#endif //AFORM_HPP

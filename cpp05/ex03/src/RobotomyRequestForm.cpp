@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 21:24:27 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/10 23:50:23 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/13 03:20:33 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,14 @@
 #include <ctime>
 
 //------------------OCCF-----------------
+RobotomyRequestForm::RobotomyRequestForm(void)
+: AForm("RobotomyRequestForm", 72, 45, "default")
+{
+	if (DEBUG_ROBOTOMY_REQUEST)
+		std::cout << "[Robotomy]: Default constructor called" << std::endl;
+	return ;
+}
+
 RobotomyRequestForm::RobotomyRequestForm(const std::string targetPath)
 : AForm("RobotomyRequestForm", 72, 45, targetPath)
 {

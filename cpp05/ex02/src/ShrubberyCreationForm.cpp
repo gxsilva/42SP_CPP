@@ -6,13 +6,21 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 21:24:27 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/10 23:50:38 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/13 03:16:40 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ShrubberyCreationForm.hpp"
 
 //------------------OCCF-----------------
+ShrubberyCreationForm::ShrubberyCreationForm(void)
+: AForm("ShrubberyCreationForm", 145, 137, "default")
+{
+	if (DEBUG_SHRUBBERY_CREATION)
+		std::cout << "[Shruberry]: Default constructor called" << std::endl;
+	return ;
+}
+
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string targetPath)
 : AForm("ShrubberyCreationForm", 145, 137, targetPath)
 {

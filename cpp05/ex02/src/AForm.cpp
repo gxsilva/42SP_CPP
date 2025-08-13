@@ -6,13 +6,24 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 16:25:28 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/10 23:47:55 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/13 03:18:30 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/AForm.hpp"
 
 //------------------OCCF-----------------
+AForm::AForm(void)
+: _name("default"),
+_target("default"),
+_signed(false),
+_gradeRequiredToSign(150),
+_gradeRequiredToExecute(150)
+{
+	if (DEBUG_AFORM)
+		std::cout << "[Form]: Default constructor called" << std::endl;
+}
+
 AForm::AForm(const std::string &name,
 		unsigned int gradeRequiredToSign,
 		unsigned int gradeRequiredToExecute,
