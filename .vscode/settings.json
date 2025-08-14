@@ -54,6 +54,7 @@
         "typeinfo": "cpp",
         "cerrno": "cpp",
         "*.tpp": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "map": "cpp"
     }
 }
