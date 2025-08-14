@@ -1,0 +1,70 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   MutantStack.hpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/14 01:16:09 by lsilva-x          #+#    #+#             */
+/*   Updated: 2025/08/14 02:02:08 by lsilva-x         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef MUTANTSTACK_HPP
+#define MUTANTSTACK_HPP
+
+#include <iostream>
+#include <stack>
+
+/*
+	Como por baixo dos panos a std::stack utilizar uma std::dequeu recebemos como
+	segundo parametro do template uma std::dequeu<T>
+
+	MutanStack<int> é um sintaxe sugar para MutanStack<int, std::dequeu<int>>
+	no exemplo qualquer outro tipo de container que ofereça push_back, pop_back, back, empty, size
+	pode ser utilizado
+
+	T e C são passadoa para o std::stack que recebe T como os tipo de elementos
+	que vão estar dentro dessa stack e C como o tipo inteiro de container que ele
+	utiliza para armazenar esses valores que no caso vai ser um std::dequeu<T>
+
+	std::stack::c -> é o membro protect de stack que realmente guarda os membros (STL pattern)
+*/
+
+
+template <typename T, typename C = std::deque<T> >
+class MutantStack : public std::stack<T, C>
+{
+	public:
+		//cria um apelido 'iterator' que aponto para o iterator do tipo de container
+		//utilizado na classe subjacente de stack no caso std::dequeu::iterator
+		typedef typename std::stack<T, C>::container_type::iterator iterator;
+		typedef typename std::stack<T, C>::container_type::const_iterator const_iterator;
+		typedef typename std::stack<T, C>::container_type::reverse_iterator reverse_iterator;
+		typedef typename std::stack<T, C>::container_type::const_reverse_iterator const_reverse_iterator;
+		
+	MutantStack<T, C> (void) { return ; };
+	MutantStack<T, C>(const MutantStack<T, C> &m): std::stack<T, C>(m) {};
+	~MutantStack<T, C> (void) { return ; };
+	MutantStack& operator=(const MutantStack<T, C> &m)
+	{
+		if (this != &m)
+			this->c = m.c;
+		return (*this);
+	}
+
+
+	MutantStack<T, C>::iterator begin() {return (this->c.begin());}
+	MutantStack<T, C>::iterator end() {return (this->c.end());}
+
+	MutantStack<T, C>::const_iterator begin() const {return (this->c.begin());}
+	MutantStack<T, C>::const_iterator end() const {return (this->c.end());}
+
+	MutantStack<T, C>::reverse_iterator rbegin() {return (this->c.rbegin());}
+	MutantStack<T, C>::reverse_iterator rend() {return (this->c.rend());}
+	
+	MutantStack<T, C>::const_reverse_iterator rbegin() const {return (this->c.rbegin());}
+	MutantStack<T, C>::const_reverse_iterator rend() const {return (this->c.rend());}
+};
+
+#endif /* MUTANTSTACK_HPP */
