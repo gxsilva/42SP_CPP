@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 15:03:00 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/12 02:12:47 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/15 15:57:17 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,11 @@
 #include <cstdlib>
 #include <cmath>
 
-/*
-Pseudo literals to handle
-inff, +inff, nanf, nan
-*/
-
 #define RESET "\033[0m"
 #define RED "\033[31m"
 #define GREEN "\033[32m"
 #define YELLOW "\033[33m"
 #define PURPLE "\e[35m"
-
 
 class ScalarConverter
 {
