@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 16:35:48 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/13 18:43:59 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/16 21:47:02 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 class Span
 {
 	private:
-		std::vector<int>	_array; //must be a cointar to be possible iterat and use <algorithm> methods
+		std::vector<int>	_array;
 		unsigned int		_size;
 		
 	public:

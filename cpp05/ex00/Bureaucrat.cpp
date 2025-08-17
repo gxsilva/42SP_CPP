@@ -6,12 +6,11 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 15:20:47 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/13 03:13:31 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/16 21:42:12 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-
 
 //------------------STATIC-----------------
 unsigned int Bureaucrat::grade_max = 1;
@@ -50,10 +49,7 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat &b)
 	if (DEBUG)
 		std::cout << "[Bureaucrat]: Assign constructor called" << std::endl;
 	if (this != &b)
-	{
-		// this->_name = b._name; -> _name is const
 		this->_grade = b._grade;
-	}
 	return (*this);
 }
 

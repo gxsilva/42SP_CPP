@@ -6,12 +6,11 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 15:22:10 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/10 18:34:27 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/16 21:42:30 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-
 
 void testValidBureaucrat()
 {

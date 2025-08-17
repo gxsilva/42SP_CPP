@@ -6,12 +6,11 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/12 02:09:27 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/12 02:51:56 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/16 21:45:53 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Serializer.hpp"
-
 
 //---------------OCCF----------------------
 Serializer::Serializer(void) { return ;}

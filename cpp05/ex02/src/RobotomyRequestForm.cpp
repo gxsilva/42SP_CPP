@@ -6,14 +6,14 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 21:24:27 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/13 03:16:09 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/16 21:44:08 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/RobotomyRequestForm.hpp"
-
 #include <cstdlib>
 #include <ctime>
+
+#include "../includes/RobotomyRequestForm.hpp"
 
 //------------------OCCF-----------------
 RobotomyRequestForm::RobotomyRequestForm(void)

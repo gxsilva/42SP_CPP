@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 16:25:28 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/10 21:44:19 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/16 21:43:03 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,7 @@ Form &Form::operator=(const Form &f)
 	if (DEBUG_FORM)
 		std::cout << "[Form]: Assign constructor called" << std::endl;
 	if (this != &f)
-	{
-		// this->_name = f._name; -> const value
 		this->_signed = f._signed;
-		// this->_gradeRequiredToSign = f._gradeRequiredToSign; -> const value
-		// this->gradeRequiredToExecute = f.gradeRequiredToExecute; -> const value
-	}
 	return (*this);
 }
 
@@ -68,7 +63,6 @@ bool Form::getSigned(void) const { return (_signed); }
 unsigned int Form::getgradeRequiredToSign(void) const { return (_gradeRequiredToSign); }
 
 unsigned int Form::gradeRequiredToExecute(void) const { return (_gradeRequiredToExecute); }
-
 
 //------------------OVERLOADING-----------------
 std::ostream &operator<<(std::ostream &Os, const Form &f)

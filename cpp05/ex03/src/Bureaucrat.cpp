@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 15:20:47 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/13 03:20:16 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/16 21:44:55 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,7 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat &b)
 	if (DEBUG_BUREAUCRAT)
 		std::cout << "[Bureaucrat]: Assign constructor called" << std::endl;
 	if (this != &b)
-	{
-		// this->_name = b._name; -> _name is const
 		this->_grade = b._grade;
-	}
 	return (*this);
 }
 

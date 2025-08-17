@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 15:39:07 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/12 01:52:10 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/16 21:45:23 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 //-------------STATIC ATTRIBTUES----------
 const std::string ScalarConverter::impossibleStr = RED + std::string("impossible") + RESET;
-
 
 //-------------METHODS--------------------
 
@@ -91,7 +90,6 @@ bool ScalarConverter::isDouble(const std::string &input)
 		return false;
 	return true;
 }
-
 
 //=================CONVERT=================
 void ScalarConverter::convertPseudo(const std::string &inputSanitize)

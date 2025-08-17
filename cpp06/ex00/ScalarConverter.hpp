@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 15:03:00 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/15 15:57:17 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/16 21:45:42 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,5 @@ class ScalarConverter
 	public:
 		static void			convert(const std::string &input);
 };
-
 
 #endif

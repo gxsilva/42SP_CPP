@@ -6,15 +6,15 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 15:20:50 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/13 03:12:48 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/16 21:42:20 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <exception>
-
 #ifndef BUREAUCRAT_HPP
 #define BUREAUCRAT_HPP
+
+#include <iostream>
+#include <exception>
 
 #ifndef DEBUG
 # define DEBUG 0

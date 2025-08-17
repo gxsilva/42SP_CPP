@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 16:35:46 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/13 18:44:17 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/16 21:46:54 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ Span::Span(unsigned int n)
 		std::cout << "[Span]: Default Constructor called" << std::endl;
 }
 
-//std::vector already make a deep copy whend another std::vector is passed in their constrcutor
 Span::Span(const Span &s)
 : _array(s._array), _size(s._size)
 {

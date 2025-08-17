@@ -6,13 +6,12 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 01:05:59 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/14 02:04:18 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/16 21:47:11 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "MutantStack.hpp"
-
 
 void test_assignment_operator()
 {
@@ -59,7 +58,6 @@ void test_basic_operations()
 		std::cout << *it << std::endl;
 		++it;
 	}
-
 }
 
 void test_reverse_iterator()
