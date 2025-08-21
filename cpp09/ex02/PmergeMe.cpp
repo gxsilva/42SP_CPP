@@ -6,7 +6,7 @@
 /*   By: lsilva-x <lsilva-x@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 20:10:39 by lsilva-x          #+#    #+#             */
-/*   Updated: 2025/08/14 21:32:28 by lsilva-x         ###   ########.fr       */
+/*   Updated: 2025/08/20 20:08:03 by lsilva-x         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,8 @@ void PmergeMe::fetchInput(int argc, char const *argv[])
 
 		if (!(iss >> value) || (iss >> extra) || value < 0)
 			throw std::runtime_error("Error: Invalid input '" + input + "'. Please provide a non-negative integer.");
-		
 		if (!dataSet.insert(value).second)
 			throw std::runtime_error("Error: Duplicate value detected: '" + input + "'. Each number must be unique.");
-		
 		_vec.push_back(value);
 		_deq.push_back(value);
 	}
